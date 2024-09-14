@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "e:/\u5b66\u4e60/\u8ba1\u7f51/\u5b9e\u9a8c\u9879\u76ee/cni-exp/E1_3790/cmake-build-debug"
+			"value" : "e:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -575,7 +575,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "E:/\u5b66\u4e60/\u8ba1\u7f51/\u5b9e\u9a8c\u9879\u76ee/cni-exp/E1_3790/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -647,7 +647,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "E:/\u5b66\u4e60/\u8ba1\u7f51/\u5b9e\u9a8c\u9879\u76ee/cni-exp/E1_3790"
+			"value" : "E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1263,7 +1263,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "E:/\u5b66\u4e60/\u8ba1\u7f51/\u5b9e\u9a8c\u9879\u76ee/cni-exp/E1_3790/cmake-build-debug"
+			"value" : "E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/cmake-build-debug"
 		},
 		{
 			"name" : "E1_3790_IS_TOP_LEVEL",
@@ -1287,7 +1287,31 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "E:/\u5b66\u4e60/\u8ba1\u7f51/\u5b9e\u9a8c\u9879\u76ee/cni-exp/E1_3790"
+			"value" : "E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790"
+		},
+		{
+			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_OpenCV",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Details about finding OpenCV"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "[C:/msys64/mingw64][v4.10.0()]"
+		},
+		{
+			"name" : "OpenCV_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for OpenCV."
+				}
+			],
+			"type" : "PATH",
+			"value" : "C:/msys64/mingw64/lib/cmake/opencv4"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",

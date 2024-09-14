@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = E$:/学习/计网/实验项目/cni-exp/E1_3790/cmake-build-debug/
+cmake_ninja_workdir = E$:/code/practice/Computer$ Network/Experiment/cni-exp/E1_3790/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target E1_3790
 
@@ -49,10 +49,17 @@ cmake_ninja_workdir = E$:/学习/计网/实验项目/cni-exp/E1_3790/cmake-build-debug/
 
 build cmake_object_order_depends_target_E1_3790: phony || CMakeFiles/E1_3790.dir
 
-build CMakeFiles/E1_3790.dir/src/main.cpp.obj: CXX_COMPILER__E1_3790_unscanned_Debug E$:/学习/计网/实验项目/cni-exp/E1_3790/src/main.cpp || cmake_object_order_depends_target_E1_3790
+build CMakeFiles/E1_3790.dir/src/QrCodeTest.cpp.obj: CXX_COMPILER__E1_3790_unscanned_Debug E$:/code/practice/Computer$ Network/Experiment/cni-exp/E1_3790/src/QrCodeTest.cpp || cmake_object_order_depends_target_E1_3790
+  DEP_FILE = CMakeFiles\E1_3790.dir\src\QrCodeTest.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/src/lib" -I"E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/src/lib/QR-Code-generator/cpp" -isystem C:/msys64/mingw64/include/opencv4
+  OBJECT_DIR = CMakeFiles\E1_3790.dir
+  OBJECT_FILE_DIR = CMakeFiles\E1_3790.dir\src
+
+build CMakeFiles/E1_3790.dir/src/main.cpp.obj: CXX_COMPILER__E1_3790_unscanned_Debug E$:/code/practice/Computer$ Network/Experiment/cni-exp/E1_3790/src/main.cpp || cmake_object_order_depends_target_E1_3790
   DEP_FILE = CMakeFiles\E1_3790.dir\src\main.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -IE:/学习/计网/实验项目/cni-exp/E1_3790/$$src/lib
+  INCLUDES = -I"E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/src/lib" -I"E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/src/lib/QR-Code-generator/cpp" -isystem C:/msys64/mingw64/include/opencv4
   OBJECT_DIR = CMakeFiles\E1_3790.dir
   OBJECT_FILE_DIR = CMakeFiles\E1_3790.dir\src
 
@@ -64,9 +71,9 @@ build CMakeFiles/E1_3790.dir/src/main.cpp.obj: CXX_COMPILER__E1_3790_unscanned_D
 #############################################
 # Link the executable E1_3790.exe
 
-build E1_3790.exe: CXX_EXECUTABLE_LINKER__E1_3790_Debug CMakeFiles/E1_3790.dir/src/main.cpp.obj
+build E1_3790.exe: CXX_EXECUTABLE_LINKER__E1_3790_Debug CMakeFiles/E1_3790.dir/src/QrCodeTest.cpp.obj CMakeFiles/E1_3790.dir/src/main.cpp.obj | C$:/msys64/mingw64/lib/libopencv_gapi.dll.a C$:/msys64/mingw64/lib/libopencv_stitching.dll.a C$:/msys64/mingw64/lib/libopencv_alphamat.dll.a C$:/msys64/mingw64/lib/libopencv_aruco.dll.a C$:/msys64/mingw64/lib/libopencv_bgsegm.dll.a C$:/msys64/mingw64/lib/libopencv_ccalib.dll.a C$:/msys64/mingw64/lib/libopencv_cvv.dll.a C$:/msys64/mingw64/lib/libopencv_dnn_objdetect.dll.a C$:/msys64/mingw64/lib/libopencv_dnn_superres.dll.a C$:/msys64/mingw64/lib/libopencv_dpm.dll.a C$:/msys64/mingw64/lib/libopencv_face.dll.a C$:/msys64/mingw64/lib/libopencv_freetype.dll.a C$:/msys64/mingw64/lib/libopencv_fuzzy.dll.a C$:/msys64/mingw64/lib/libopencv_hdf.dll.a C$:/msys64/mingw64/lib/libopencv_hfs.dll.a C$:/msys64/mingw64/lib/libopencv_img_hash.dll.a C$:/msys64/mingw64/lib/libopencv_intensity_transform.dll.a C$:/msys64/mingw64/lib/libopencv_line_descriptor.dll.a C$:/msys64/mingw64/lib/libopencv_mcc.dll.a C$:/msys64/mingw64/lib/libopencv_ovis.dll.a C$:/msys64/mingw64/lib/libopencv_quality.dll.a C$:/msys64/mingw64/lib/libopencv_rapid.dll.a C$:/msys64/mingw64/lib/libopencv_reg.dll.a C$:/msys64/mingw64/lib/libopencv_rgbd.dll.a C$:/msys64/mingw64/lib/libopencv_saliency.dll.a C$:/msys64/mingw64/lib/libopencv_sfm.dll.a C$:/msys64/mingw64/lib/libopencv_signal.dll.a C$:/msys64/mingw64/lib/libopencv_stereo.dll.a C$:/msys64/mingw64/lib/libopencv_structured_light.dll.a C$:/msys64/mingw64/lib/libopencv_superres.dll.a C$:/msys64/mingw64/lib/libopencv_surface_matching.dll.a C$:/msys64/mingw64/lib/libopencv_tracking.dll.a C$:/msys64/mingw64/lib/libopencv_videostab.dll.a C$:/msys64/mingw64/lib/libopencv_viz.dll.a C$:/msys64/mingw64/lib/libopencv_wechat_qrcode.dll.a C$:/msys64/mingw64/lib/libopencv_xfeatures2d.dll.a C$:/msys64/mingw64/lib/libopencv_xobjdetect.dll.a C$:/msys64/mingw64/lib/libopencv_xphoto.dll.a C$:/msys64/mingw64/lib/libopencv_shape.dll.a C$:/msys64/mingw64/lib/libopencv_highgui.dll.a C$:/msys64/mingw64/lib/libopencv_datasets.dll.a C$:/msys64/mingw64/lib/libopencv_plot.dll.a C$:/msys64/mingw64/lib/libopencv_text.dll.a C$:/msys64/mingw64/lib/libopencv_ml.dll.a C$:/msys64/mingw64/lib/libopencv_phase_unwrapping.dll.a C$:/msys64/mingw64/lib/libopencv_optflow.dll.a C$:/msys64/mingw64/lib/libopencv_ximgproc.dll.a C$:/msys64/mingw64/lib/libopencv_video.dll.a C$:/msys64/mingw64/lib/libopencv_videoio.dll.a C$:/msys64/mingw64/lib/libopencv_imgcodecs.dll.a C$:/msys64/mingw64/lib/libopencv_objdetect.dll.a C$:/msys64/mingw64/lib/libopencv_calib3d.dll.a C$:/msys64/mingw64/lib/libopencv_dnn.dll.a C$:/msys64/mingw64/lib/libopencv_features2d.dll.a C$:/msys64/mingw64/lib/libopencv_flann.dll.a C$:/msys64/mingw64/lib/libopencv_photo.dll.a C$:/msys64/mingw64/lib/libopencv_imgproc.dll.a C$:/msys64/mingw64/lib/libopencv_core.dll.a
   FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = C:/msys64/mingw64/lib/libopencv_gapi.dll.a  C:/msys64/mingw64/lib/libopencv_stitching.dll.a  C:/msys64/mingw64/lib/libopencv_alphamat.dll.a  C:/msys64/mingw64/lib/libopencv_aruco.dll.a  C:/msys64/mingw64/lib/libopencv_bgsegm.dll.a  C:/msys64/mingw64/lib/libopencv_ccalib.dll.a  C:/msys64/mingw64/lib/libopencv_cvv.dll.a  C:/msys64/mingw64/lib/libopencv_dnn_objdetect.dll.a  C:/msys64/mingw64/lib/libopencv_dnn_superres.dll.a  C:/msys64/mingw64/lib/libopencv_dpm.dll.a  C:/msys64/mingw64/lib/libopencv_face.dll.a  C:/msys64/mingw64/lib/libopencv_freetype.dll.a  C:/msys64/mingw64/lib/libopencv_fuzzy.dll.a  C:/msys64/mingw64/lib/libopencv_hdf.dll.a  C:/msys64/mingw64/lib/libopencv_hfs.dll.a  C:/msys64/mingw64/lib/libopencv_img_hash.dll.a  C:/msys64/mingw64/lib/libopencv_intensity_transform.dll.a  C:/msys64/mingw64/lib/libopencv_line_descriptor.dll.a  C:/msys64/mingw64/lib/libopencv_mcc.dll.a  C:/msys64/mingw64/lib/libopencv_ovis.dll.a  C:/msys64/mingw64/lib/libopencv_quality.dll.a  C:/msys64/mingw64/lib/libopencv_rapid.dll.a  C:/msys64/mingw64/lib/libopencv_reg.dll.a  C:/msys64/mingw64/lib/libopencv_rgbd.dll.a  C:/msys64/mingw64/lib/libopencv_saliency.dll.a  C:/msys64/mingw64/lib/libopencv_sfm.dll.a  C:/msys64/mingw64/lib/libopencv_signal.dll.a  C:/msys64/mingw64/lib/libopencv_stereo.dll.a  C:/msys64/mingw64/lib/libopencv_structured_light.dll.a  C:/msys64/mingw64/lib/libopencv_superres.dll.a  C:/msys64/mingw64/lib/libopencv_surface_matching.dll.a  C:/msys64/mingw64/lib/libopencv_tracking.dll.a  C:/msys64/mingw64/lib/libopencv_videostab.dll.a  C:/msys64/mingw64/lib/libopencv_viz.dll.a  C:/msys64/mingw64/lib/libopencv_wechat_qrcode.dll.a  C:/msys64/mingw64/lib/libopencv_xfeatures2d.dll.a  C:/msys64/mingw64/lib/libopencv_xobjdetect.dll.a  C:/msys64/mingw64/lib/libopencv_xphoto.dll.a  C:/msys64/mingw64/lib/libopencv_shape.dll.a  C:/msys64/mingw64/lib/libopencv_highgui.dll.a  C:/msys64/mingw64/lib/libopencv_datasets.dll.a  C:/msys64/mingw64/lib/libopencv_plot.dll.a  C:/msys64/mingw64/lib/libopencv_text.dll.a  C:/msys64/mingw64/lib/libopencv_ml.dll.a  C:/msys64/mingw64/lib/libopencv_phase_unwrapping.dll.a  C:/msys64/mingw64/lib/libopencv_optflow.dll.a  C:/msys64/mingw64/lib/libopencv_ximgproc.dll.a  C:/msys64/mingw64/lib/libopencv_video.dll.a  C:/msys64/mingw64/lib/libopencv_videoio.dll.a  C:/msys64/mingw64/lib/libopencv_imgcodecs.dll.a  C:/msys64/mingw64/lib/libopencv_objdetect.dll.a  C:/msys64/mingw64/lib/libopencv_calib3d.dll.a  C:/msys64/mingw64/lib/libopencv_dnn.dll.a  C:/msys64/mingw64/lib/libopencv_features2d.dll.a  C:/msys64/mingw64/lib/libopencv_flann.dll.a  C:/msys64/mingw64/lib/libopencv_photo.dll.a  C:/msys64/mingw64/lib/libopencv_imgproc.dll.a  C:/msys64/mingw64/lib/libopencv_core.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\E1_3790.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -74,12 +81,78 @@ build E1_3790.exe: CXX_EXECUTABLE_LINKER__E1_3790_Debug CMakeFiles/E1_3790.dir/s
   TARGET_IMPLIB = libE1_3790.dll.a
   TARGET_PDB = E1_3790.exe.dbg
 
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target qrcodegen
+
+
+#############################################
+# Order-only phony target for qrcodegen
+
+build cmake_object_order_depends_target_qrcodegen: phony || CMakeFiles/qrcodegen.dir
+
+build CMakeFiles/qrcodegen.dir/src/lib/QR-Code-generator/cpp/qrcodegen.cpp.obj: CXX_COMPILER__qrcodegen_unscanned_Debug E$:/code/practice/Computer$ Network/Experiment/cni-exp/E1_3790/src/lib/QR-Code-generator/cpp/qrcodegen.cpp || cmake_object_order_depends_target_qrcodegen
+  DEP_FILE = CMakeFiles\qrcodegen.dir\src\lib\QR-Code-generator\cpp\qrcodegen.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/src/lib" -I"E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/src/lib/QR-Code-generator/cpp" -isystem C:/msys64/mingw64/include/opencv4
+  OBJECT_DIR = CMakeFiles\qrcodegen.dir
+  OBJECT_FILE_DIR = CMakeFiles\qrcodegen.dir\src\lib\QR-Code-generator\cpp
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target qrcodegen
+
+
+#############################################
+# Link the static library libqrcodegen.a
+
+build libqrcodegen.a: CXX_STATIC_LIBRARY_LINKER__qrcodegen_Debug CMakeFiles/qrcodegen.dir/src/lib/QR-Code-generator/cpp/qrcodegen.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = CMakeFiles\qrcodegen.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = libqrcodegen.a
+  TARGET_PDB = qrcodegen.a.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target QRCodeTest
+
+
+#############################################
+# Order-only phony target for QRCodeTest
+
+build cmake_object_order_depends_target_QRCodeTest: phony || cmake_object_order_depends_target_qrcodegen
+
+build CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj: CXX_COMPILER__QRCodeTest_unscanned_Debug E$:/code/practice/Computer$ Network/Experiment/cni-exp/E1_3790/src/QrCodeTest.cpp || cmake_object_order_depends_target_QRCodeTest
+  DEP_FILE = CMakeFiles\QRCodeTest.dir\src\QrCodeTest.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/src/lib" -I"E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/src/lib/QR-Code-generator/cpp" -isystem C:/msys64/mingw64/include/opencv4
+  OBJECT_DIR = CMakeFiles\QRCodeTest.dir
+  OBJECT_FILE_DIR = CMakeFiles\QRCodeTest.dir\src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target QRCodeTest
+
+
+#############################################
+# Link the executable E:\code\practice\Computer Network\Experiment\cni-exp\E1_3790\bin\QRCodeTest.exe
+
+build E$:/code/practice/Computer$ Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe: CXX_EXECUTABLE_LINKER__QRCodeTest_Debug CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj | libqrcodegen.a C$:/msys64/mingw64/lib/libopencv_gapi.dll.a C$:/msys64/mingw64/lib/libopencv_stitching.dll.a C$:/msys64/mingw64/lib/libopencv_alphamat.dll.a C$:/msys64/mingw64/lib/libopencv_aruco.dll.a C$:/msys64/mingw64/lib/libopencv_bgsegm.dll.a C$:/msys64/mingw64/lib/libopencv_ccalib.dll.a C$:/msys64/mingw64/lib/libopencv_cvv.dll.a C$:/msys64/mingw64/lib/libopencv_dnn_objdetect.dll.a C$:/msys64/mingw64/lib/libopencv_dnn_superres.dll.a C$:/msys64/mingw64/lib/libopencv_dpm.dll.a C$:/msys64/mingw64/lib/libopencv_face.dll.a C$:/msys64/mingw64/lib/libopencv_freetype.dll.a C$:/msys64/mingw64/lib/libopencv_fuzzy.dll.a C$:/msys64/mingw64/lib/libopencv_hdf.dll.a C$:/msys64/mingw64/lib/libopencv_hfs.dll.a C$:/msys64/mingw64/lib/libopencv_img_hash.dll.a C$:/msys64/mingw64/lib/libopencv_intensity_transform.dll.a C$:/msys64/mingw64/lib/libopencv_line_descriptor.dll.a C$:/msys64/mingw64/lib/libopencv_mcc.dll.a C$:/msys64/mingw64/lib/libopencv_ovis.dll.a C$:/msys64/mingw64/lib/libopencv_quality.dll.a C$:/msys64/mingw64/lib/libopencv_rapid.dll.a C$:/msys64/mingw64/lib/libopencv_reg.dll.a C$:/msys64/mingw64/lib/libopencv_rgbd.dll.a C$:/msys64/mingw64/lib/libopencv_saliency.dll.a C$:/msys64/mingw64/lib/libopencv_sfm.dll.a C$:/msys64/mingw64/lib/libopencv_signal.dll.a C$:/msys64/mingw64/lib/libopencv_stereo.dll.a C$:/msys64/mingw64/lib/libopencv_structured_light.dll.a C$:/msys64/mingw64/lib/libopencv_phase_unwrapping.dll.a C$:/msys64/mingw64/lib/libopencv_superres.dll.a C$:/msys64/mingw64/lib/libopencv_optflow.dll.a C$:/msys64/mingw64/lib/libopencv_surface_matching.dll.a C$:/msys64/mingw64/lib/libopencv_tracking.dll.a C$:/msys64/mingw64/lib/libopencv_highgui.dll.a C$:/msys64/mingw64/lib/libopencv_datasets.dll.a C$:/msys64/mingw64/lib/libopencv_plot.dll.a C$:/msys64/mingw64/lib/libopencv_text.dll.a C$:/msys64/mingw64/lib/libopencv_videostab.dll.a C$:/msys64/mingw64/lib/libopencv_videoio.dll.a C$:/msys64/mingw64/lib/libopencv_viz.dll.a C$:/msys64/mingw64/lib/libopencv_wechat_qrcode.dll.a C$:/msys64/mingw64/lib/libopencv_xfeatures2d.dll.a C$:/msys64/mingw64/lib/libopencv_ml.dll.a C$:/msys64/mingw64/lib/libopencv_shape.dll.a C$:/msys64/mingw64/lib/libopencv_ximgproc.dll.a C$:/msys64/mingw64/lib/libopencv_video.dll.a C$:/msys64/mingw64/lib/libopencv_xobjdetect.dll.a C$:/msys64/mingw64/lib/libopencv_imgcodecs.dll.a C$:/msys64/mingw64/lib/libopencv_objdetect.dll.a C$:/msys64/mingw64/lib/libopencv_calib3d.dll.a C$:/msys64/mingw64/lib/libopencv_dnn.dll.a C$:/msys64/mingw64/lib/libopencv_features2d.dll.a C$:/msys64/mingw64/lib/libopencv_flann.dll.a C$:/msys64/mingw64/lib/libopencv_xphoto.dll.a C$:/msys64/mingw64/lib/libopencv_photo.dll.a C$:/msys64/mingw64/lib/libopencv_imgproc.dll.a C$:/msys64/mingw64/lib/libopencv_core.dll.a || libqrcodegen.a
+  FLAGS = -g
+  LINK_LIBRARIES = libqrcodegen.a  C:/msys64/mingw64/lib/libopencv_gapi.dll.a  C:/msys64/mingw64/lib/libopencv_stitching.dll.a  C:/msys64/mingw64/lib/libopencv_alphamat.dll.a  C:/msys64/mingw64/lib/libopencv_aruco.dll.a  C:/msys64/mingw64/lib/libopencv_bgsegm.dll.a  C:/msys64/mingw64/lib/libopencv_ccalib.dll.a  C:/msys64/mingw64/lib/libopencv_cvv.dll.a  C:/msys64/mingw64/lib/libopencv_dnn_objdetect.dll.a  C:/msys64/mingw64/lib/libopencv_dnn_superres.dll.a  C:/msys64/mingw64/lib/libopencv_dpm.dll.a  C:/msys64/mingw64/lib/libopencv_face.dll.a  C:/msys64/mingw64/lib/libopencv_freetype.dll.a  C:/msys64/mingw64/lib/libopencv_fuzzy.dll.a  C:/msys64/mingw64/lib/libopencv_hdf.dll.a  C:/msys64/mingw64/lib/libopencv_hfs.dll.a  C:/msys64/mingw64/lib/libopencv_img_hash.dll.a  C:/msys64/mingw64/lib/libopencv_intensity_transform.dll.a  C:/msys64/mingw64/lib/libopencv_line_descriptor.dll.a  C:/msys64/mingw64/lib/libopencv_mcc.dll.a  C:/msys64/mingw64/lib/libopencv_ovis.dll.a  C:/msys64/mingw64/lib/libopencv_quality.dll.a  C:/msys64/mingw64/lib/libopencv_rapid.dll.a  C:/msys64/mingw64/lib/libopencv_reg.dll.a  C:/msys64/mingw64/lib/libopencv_rgbd.dll.a  C:/msys64/mingw64/lib/libopencv_saliency.dll.a  C:/msys64/mingw64/lib/libopencv_sfm.dll.a  C:/msys64/mingw64/lib/libopencv_signal.dll.a  C:/msys64/mingw64/lib/libopencv_stereo.dll.a  C:/msys64/mingw64/lib/libopencv_structured_light.dll.a  C:/msys64/mingw64/lib/libopencv_phase_unwrapping.dll.a  C:/msys64/mingw64/lib/libopencv_superres.dll.a  C:/msys64/mingw64/lib/libopencv_optflow.dll.a  C:/msys64/mingw64/lib/libopencv_surface_matching.dll.a  C:/msys64/mingw64/lib/libopencv_tracking.dll.a  C:/msys64/mingw64/lib/libopencv_highgui.dll.a  C:/msys64/mingw64/lib/libopencv_datasets.dll.a  C:/msys64/mingw64/lib/libopencv_plot.dll.a  C:/msys64/mingw64/lib/libopencv_text.dll.a  C:/msys64/mingw64/lib/libopencv_videostab.dll.a  C:/msys64/mingw64/lib/libopencv_videoio.dll.a  C:/msys64/mingw64/lib/libopencv_viz.dll.a  C:/msys64/mingw64/lib/libopencv_wechat_qrcode.dll.a  C:/msys64/mingw64/lib/libopencv_xfeatures2d.dll.a  C:/msys64/mingw64/lib/libopencv_ml.dll.a  C:/msys64/mingw64/lib/libopencv_shape.dll.a  C:/msys64/mingw64/lib/libopencv_ximgproc.dll.a  C:/msys64/mingw64/lib/libopencv_video.dll.a  C:/msys64/mingw64/lib/libopencv_xobjdetect.dll.a  C:/msys64/mingw64/lib/libopencv_imgcodecs.dll.a  C:/msys64/mingw64/lib/libopencv_objdetect.dll.a  C:/msys64/mingw64/lib/libopencv_calib3d.dll.a  C:/msys64/mingw64/lib/libopencv_dnn.dll.a  C:/msys64/mingw64/lib/libopencv_features2d.dll.a  C:/msys64/mingw64/lib/libopencv_flann.dll.a  C:/msys64/mingw64/lib/libopencv_xphoto.dll.a  C:/msys64/mingw64/lib/libopencv_photo.dll.a  C:/msys64/mingw64/lib/libopencv_imgproc.dll.a  C:/msys64/mingw64/lib/libopencv_core.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\QRCodeTest.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = "E:\code\practice\Computer Network\Experiment\cni-exp\E1_3790\bin\QRCodeTest.exe"
+  TARGET_IMPLIB = libQRCodeTest.dll.a
+  TARGET_PDB = QRCodeTest.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D E:\学习\计网\实验项目\cni-exp\E1_3790\cmake-build-debug && "D:\others\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "E:\code\practice\Computer Network\Experiment\cni-exp\E1_3790\cmake-build-debug" && "D:\others\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -90,7 +163,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D E:\学习\计网\实验项目\cni-exp\E1_3790\cmake-build-debug && "D:\others\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SE:\学习\计网\实验项目\cni-exp\E1_3790 -BE:\学习\计网\实验项目\cni-exp\E1_3790\cmake-build-debug"
+  COMMAND = cmd.exe /C "cd /D "E:\code\practice\Computer Network\Experiment\cni-exp\E1_3790\cmake-build-debug" && "D:\others\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S"E:\code\practice\Computer Network\Experiment\cni-exp\E1_3790" -B"E:\code\practice\Computer Network\Experiment\cni-exp\E1_3790\cmake-build-debug""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -102,15 +175,21 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build E1_3790: phony E1_3790.exe
 
+build QRCodeTest: phony E$:/code/practice/Computer$ Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe
+
+build QRCodeTest.exe: phony E$:/code/practice/Computer$ Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe
+
+build qrcodegen: phony libqrcodegen.a
+
 # =============================================================================
 # Folder targets.
 
 # =============================================================================
 
 #############################################
-# Folder: E:/学习/计网/实验项目/cni-exp/E1_3790/cmake-build-debug
+# Folder: E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/cmake-build-debug
 
-build all: phony E1_3790.exe
+build all: phony E1_3790.exe libqrcodegen.a E$:/code/practice/Computer$ Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe
 
 # =============================================================================
 # Built-in targets
@@ -119,14 +198,14 @@ build all: phony E1_3790.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeRCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake E$:/学习/计网/实验项目/cni-exp/E1_3790/CMakeLists.txt
+build build.ninja: RERUN_CMAKE | C$:/msys64/mingw64/lib/cmake/opencv4/OpenCVConfig-version.cmake C$:/msys64/mingw64/lib/cmake/opencv4/OpenCVConfig.cmake C$:/msys64/mingw64/lib/cmake/opencv4/OpenCVModules-release.cmake C$:/msys64/mingw64/lib/cmake/opencv4/OpenCVModules.cmake CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeRCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageMessage.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake E$:/code/practice/Computer$ Network/Experiment/cni-exp/E1_3790/CMakeLists.txt
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeRCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake E$:/学习/计网/实验项目/cni-exp/E1_3790/CMakeLists.txt: phony
+build C$:/msys64/mingw64/lib/cmake/opencv4/OpenCVConfig-version.cmake C$:/msys64/mingw64/lib/cmake/opencv4/OpenCVConfig.cmake C$:/msys64/mingw64/lib/cmake/opencv4/OpenCVModules-release.cmake C$:/msys64/mingw64/lib/cmake/opencv4/OpenCVModules.cmake CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeRCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageMessage.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake D$:/others/JetBrains/CLion$ 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake E$:/code/practice/Computer$ Network/Experiment/cni-exp/E1_3790/CMakeLists.txt: phony
 
 
 #############################################
