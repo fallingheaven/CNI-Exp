@@ -41,7 +41,7 @@ namespace base64
         /// 将输入的string转为base64格式
         /// \param input 输入
         /// \return 输出
-        vector<uchar> base64_decode(const std::string& input)
+        vector<uchar> base64_decode(vector<uchar>& input)
         {
             vector<uchar> output;
 
@@ -73,7 +73,7 @@ namespace base64
         /// base64 数据转为 Mat
         /// \param encoded
         /// \return
-        cv::Mat base64_to_mat(const std::string& encoded)
+        cv::Mat base64_to_mat(vector<uchar>& encoded)
         {
             std::vector<uchar> data = base64_decode(encoded);
             cv::Mat img = cv::imdecode(data, cv::IMREAD_COLOR);

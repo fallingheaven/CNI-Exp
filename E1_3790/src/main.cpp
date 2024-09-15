@@ -1,6 +1,7 @@
 #include "base64_encode.hpp"
 #include "base64_decode.hpp"
 #include "ffmpeg_cmd.hpp"
+#include "QrEncoder.hpp"
 #include <iostream>
 #include <string>
 #include <map>
@@ -40,9 +41,10 @@ bool encode_input(int argc, char** argv)
     string output_file_path = argv[2];
     int video_length = stoi(argv[3]);
 
-//    QRCodeEncoder()
+    QrEncoder encoder = QrEncoder();
+    if (!encoder.encode(input_file_path, output_file_path, video_length)) return false;
 
-
+    return true;
 }
 
 bool decode_input(int argc, char** argv)
@@ -53,4 +55,9 @@ bool decode_input(int argc, char** argv)
     string input_file_path = argv[1];
     string output_file_path = argv[2];
     string output_info_path = argv[3];
+
+    QrEncoder encoder = QrEncoder();
+    if (!encoder.decode(input_file_path, output_file_path, output_file_path)) return false;
+
+    return true;
 }

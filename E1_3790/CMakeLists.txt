@@ -27,7 +27,8 @@ endif ()
 add_executable(${PROJECT_NAME} ${SOURCES}
         src/base64_decode.hpp
         src/base64_encode.hpp
-        src/ffmpeg_cmd.hpp)
+        src/ffmpeg_cmd.hpp
+        src/QrEncoder.hpp)
 
 # 输出目录（可执行文件）
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ../bin)

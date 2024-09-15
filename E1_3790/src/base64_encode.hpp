@@ -19,14 +19,14 @@ namespace base64
         /// 将数据编码为 Base64
         /// \param input
         /// \return
-        string base64_encode(const vector<uchar>& input)
+        vector<uchar> base64_encode(const vector<uchar>& input)
         {
             static const string base64_chars =
                     "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                     "abcdefghijklmnopqrstuvwxyz"
                     "0123456789+/";
 
-            string output;
+            vector<uchar> output;
             // 记录每一组的0/1位
             int group = 0;
             // base编码逻辑
@@ -70,7 +70,7 @@ namespace base64
         /// \param mat 图像文件
         /// \param ext 文件后缀
         /// \return
-        string mat_to_base64(const cv::Mat& mat, string& ext)
+        vector<uchar> mat_to_base64(const cv::Mat& mat, string& ext)
         {
             vector<uchar> buffer;
             cv::imencode(ext, mat, buffer);

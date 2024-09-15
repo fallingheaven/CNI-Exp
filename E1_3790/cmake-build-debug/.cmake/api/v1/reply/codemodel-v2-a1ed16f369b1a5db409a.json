@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.26"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "E1_3790",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "E1_3790::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-E1_3790-Debug-51818060967ca4ab990c.json",
+					"name" : "E1_3790",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "QRCodeTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-QRCodeTest-Debug-3a8bfec8a5daaaa80d66.json",
+					"name" : "QRCodeTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "qrcodegen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-qrcodegen-Debug-1d2564840cff064385ba.json",
+					"name" : "qrcodegen",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/cmake-build-debug",
+		"source" : "E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}

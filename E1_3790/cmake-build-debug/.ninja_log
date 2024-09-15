@@ -1,60 +1,10 @@
 # ninja log v5
 25	3500	7480274519402274	CMakeFiles/E1_3790.dir/src/main.cpp.obj	805287deb8af93a6
 7	1528	7480299932362709	CMakeFiles/QRCodeTest.dir/src/QRcodeTest.cpp.obj	e841280a1926eba4
-1605	1958	7480349188242625	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
+1457	1783	7480364198221599	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
 3500	3879	7480274523151416	E1_3790.exe	f6447d5cbbaf699
 10	2517	7480274509577196	CMakeFiles/E1_3790.dir/src/QRcodeTest.cpp.obj	431e5755b453a1af
-9	1604	7480349184766927	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
-1	242	7480303666140368	build.ninja	98e69886e9051275
+9	1456	7480364195011370	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
+1	242	7481195108278139	build.ninja	98e69886e9051275
 16	1813	7480302825565672	CMakeFiles/qrcodegen.dir/src/lib/QR-Code-generator/cpp/qrcodegen.cpp.obj	188d87cf76475c52
 1813	2610	7480302833577915	libqrcodegen.a	e0d68cabc3a66c66
-8	1617	7480349338949039	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
-1618	1965	7480349342370457	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
-7	1491	7480349420895122	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
-1492	1835	7480349424284452	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
-10	1571	7480349479075948	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
-1572	1917	7480349482484982	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
-9	1476	7480349782288285	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
-1476	1809	7480349785581600	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
-8	1473	7480349876386418	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
-1474	1811	7480349879668842	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
-8	1441	7480352299775863	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
-1442	1762	7480352302940952	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
-9	1429	7480352497566253	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
-1429	1747	7480352500703483	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
-9	1638	7480359091527692	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
-1638	1991	7480359095021224	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
-8	1477	7480359370201084	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
-1478	1800	7480359373367300	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
-8	1462	7480359556542029	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
-1463	1799	7480359559855041	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
-8	1492	7480359716461587	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
-1492	1842	7480359719902269	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
-10	1527	7480359822873246	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
-1528	1849	7480359826043734	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
-12	1548	7480359960574462	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
-1549	1889	7480359963911712	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
-8	1559	7480360054838555	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
-1560	1893	7480360058119462	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
-10	1581	7480360259801085	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
-1581	1916	7480360263108630	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
-9	1518	7480360690059044	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
-1518	1858	7480360693417561	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
-9	1484	7480360851580424	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
-1485	1820	7480360854860975	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
-8	1477	7480360994278113	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
-1477	1832	7480360997760998	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
-11	1637	7480361649828369	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
-1638	1975	7480361653061805	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
-7	1503	7480361799932761	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
-1503	1862	7480361803477833	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
-8	1467	7480362551154359	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
-1467	1813	7480362554562792	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
-8	1490	7480363318353925	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
-1491	1816	7480363321563933	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
-8	1549	7480363928092416	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
-1550	1889	7480363931469599	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
-9	1540	7480364022479066	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
-1541	1872	7480364025736163	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
-9	1456	7480364195011370	CMakeFiles/QRCodeTest.dir/src/QrCodeTest.cpp.obj	77bbf92488a4554b
-1457	1783	7480364198221599	E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/bin/QRCodeTest.exe	d42aae1967e36399
