@@ -3,9 +3,15 @@ project(E1_3790)
 
 set(CMAKE_CXX_STANDARD 20)
 
+set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
+#让链接器静态链接GCC和C++标准库
+
 # 定义源文件目录
 aux_source_directory(src SRC_LIST)
 aux_source_directory(src/lib LIB_LIST)
+
+# 输出目录（可执行文件）
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ../bin)
 
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
@@ -23,22 +29,29 @@ if (LIB_LIST)
     list(APPEND SOURCES ${LIB_LIST})
 endif ()
 
-# 生成可执行文件
-add_executable(${PROJECT_NAME} ${SOURCES}
-        src/base64_decode.hpp
-        src/base64_encode.hpp
-        src/ffmpeg_cmd.hpp
-        src/QrEncoder.hpp)
-
-# 输出目录（可执行文件）
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ../bin)
-
-# 头文件
-include_directories(src/lib)
-
+# 这个记得在add_executable之前
 set(QrCodePath src/lib/QR-Code-generator/cpp)
 add_library(qrcodegen STATIC ${QrCodePath}/qrcodegen.hpp ${QrCodePath}/qrcodegen.cpp)
 include_directories(${QrCodePath})
 link_libraries(qrcodegen)
 
-add_executable(QRCodeTest src/QrCodeTest.cpp)
+find_library(QRENCODE_LIBRARY qrencode REQUIRED)
+link_libraries(${QRENCODE_LIBRARY})
+
+#find_package(Qt6 REQUIRED COMPONENTS Widgets)
+#find_package(Qt6 REQUIRED COMPONENTS Core)
+#include_directories(${Qt_INCLUDE_DIRS})
+#link_libraries(Qt6::Widgets Qt6::Core)
+#
+#set(CMAKE_AUTOMOC ON)
+#set(CMAKE_AUTORCC ON)
+#set(CMAKE_AUTOUIC ON)
+
+# 生成可执行文件
+add_executable(encode ${SOURCES})
+# 区分是为了方便在IDE中测试
+add_executable(decode ${SOURCES})
+
+add_executable(QrCodeTest src/debug/QrCodeTest.cpp)
+add_executable(Check_Img_Identical src/debug/check_img_identical.cpp)
+add_executable(progress_bar src/debug/progress_bar.cpp)

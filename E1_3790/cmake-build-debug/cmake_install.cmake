@@ -1,4 +1,4 @@
-# Install script for directory: E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790
+# Install script for directory: E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "E:/code/practice/Computer Network/Experiment/cni-exp/E1_3790/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
