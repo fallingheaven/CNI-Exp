@@ -634,3 +634,82 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/others/JetBrains/CLion 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckLibraryExists.cmake:71 (try_compile)"
+      - "D:/others/JetBrains/CLion 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindLibLZMA.cmake:97 (CHECK_LIBRARY_EXISTS)"
+      - "CMakeLists.txt:55 (find_package)"
+    checks:
+      - "Looking for lzma_auto_decoder in C:/msys64/mingw64/lib/liblzma.dll.a"
+    directories:
+      source: "E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-wf1vgs"
+      binary: "E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-wf1vgs"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-static-libgcc -static-libstdc++"
+    buildResult:
+      variable: "LIBLZMA_HAS_AUTO_DECODER"
+      cached: true
+      stdout: |
+        Change Dir: E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-wf1vgs
+        
+        Run Build Command(s):D:/others/JetBrains/CLion 2023.2/bin/ninja/win/x64/ninja.exe -v cmTC_a7180 && [1/2] C:\\msys64\\mingw64\\bin\\cc.exe   -DCHECK_FUNCTION_EXISTS=lzma_auto_decoder -fdiagnostics-color=always -o CMakeFiles/cmTC_a7180.dir/CheckFunctionExists.c.obj -c E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-wf1vgs/CheckFunctionExists.c
+        [2/2] cmd.exe /C "cd . && C:\\msys64\\mingw64\\bin\\cc.exe -DCHECK_FUNCTION_EXISTS=lzma_auto_decoder -static-libgcc -static-libstdc++ CMakeFiles/cmTC_a7180.dir/CheckFunctionExists.c.obj -o cmTC_a7180.exe -Wl,--out-implib,libcmTC_a7180.dll.a -Wl,--major-image-version,0,--minor-image-version,0  C:/msys64/mingw64/lib/liblzma.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/others/JetBrains/CLion 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckLibraryExists.cmake:71 (try_compile)"
+      - "D:/others/JetBrains/CLion 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindLibLZMA.cmake:98 (CHECK_LIBRARY_EXISTS)"
+      - "CMakeLists.txt:55 (find_package)"
+    checks:
+      - "Looking for lzma_easy_encoder in C:/msys64/mingw64/lib/liblzma.dll.a"
+    directories:
+      source: "E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-bmi2zg"
+      binary: "E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-bmi2zg"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-static-libgcc -static-libstdc++"
+    buildResult:
+      variable: "LIBLZMA_HAS_EASY_ENCODER"
+      cached: true
+      stdout: |
+        Change Dir: E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-bmi2zg
+        
+        Run Build Command(s):D:/others/JetBrains/CLion 2023.2/bin/ninja/win/x64/ninja.exe -v cmTC_1d6b6 && [1/2] C:\\msys64\\mingw64\\bin\\cc.exe   -DCHECK_FUNCTION_EXISTS=lzma_easy_encoder -fdiagnostics-color=always -o CMakeFiles/cmTC_1d6b6.dir/CheckFunctionExists.c.obj -c E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-bmi2zg/CheckFunctionExists.c
+        [2/2] cmd.exe /C "cd . && C:\\msys64\\mingw64\\bin\\cc.exe -DCHECK_FUNCTION_EXISTS=lzma_easy_encoder -static-libgcc -static-libstdc++ CMakeFiles/cmTC_1d6b6.dir/CheckFunctionExists.c.obj -o cmTC_1d6b6.exe -Wl,--out-implib,libcmTC_1d6b6.dll.a -Wl,--major-image-version,0,--minor-image-version,0  C:/msys64/mingw64/lib/liblzma.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/others/JetBrains/CLion 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckLibraryExists.cmake:71 (try_compile)"
+      - "D:/others/JetBrains/CLion 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindLibLZMA.cmake:99 (CHECK_LIBRARY_EXISTS)"
+      - "CMakeLists.txt:55 (find_package)"
+    checks:
+      - "Looking for lzma_lzma_preset in C:/msys64/mingw64/lib/liblzma.dll.a"
+    directories:
+      source: "E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-46cs1b"
+      binary: "E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-46cs1b"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-static-libgcc -static-libstdc++"
+    buildResult:
+      variable: "LIBLZMA_HAS_LZMA_PRESET"
+      cached: true
+      stdout: |
+        Change Dir: E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-46cs1b
+        
+        Run Build Command(s):D:/others/JetBrains/CLion 2023.2/bin/ninja/win/x64/ninja.exe -v cmTC_49dd3 && [1/2] C:\\msys64\\mingw64\\bin\\cc.exe   -DCHECK_FUNCTION_EXISTS=lzma_lzma_preset -fdiagnostics-color=always -o CMakeFiles/cmTC_49dd3.dir/CheckFunctionExists.c.obj -c E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-46cs1b/CheckFunctionExists.c
+        [2/2] cmd.exe /C "cd . && C:\\msys64\\mingw64\\bin\\cc.exe -DCHECK_FUNCTION_EXISTS=lzma_lzma_preset -static-libgcc -static-libstdc++ CMakeFiles/cmTC_49dd3.dir/CheckFunctionExists.c.obj -o cmTC_49dd3.exe -Wl,--out-implib,libcmTC_49dd3.dll.a -Wl,--major-image-version,0,--minor-image-version,0  C:/msys64/mingw64/lib/liblzma.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+...

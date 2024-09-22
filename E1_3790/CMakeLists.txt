@@ -47,6 +47,13 @@ link_libraries(${QRENCODE_LIBRARY})
 #set(CMAKE_AUTORCC ON)
 #set(CMAKE_AUTOUIC ON)
 
+find_package(ZLIB REQUIRED)
+include_directories(${ZLIB_INCLUDE_DIRS})
+link_libraries(${ZLIB_LIBRARIES})
+
+include_directories(C:/msys64/mingw64/include/zbar)
+link_libraries(C:/msys64/mingw64/lib/libzbar.dll.a)
+
 # 生成可执行文件
 add_executable(encode ${SOURCES})
 # 区分是为了方便在IDE中测试

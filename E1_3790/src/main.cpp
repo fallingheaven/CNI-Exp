@@ -51,6 +51,7 @@ bool encode_input(int argc, char** argv)
 
 bool decode_input(int argc, char** argv)
 {
+    system("chcp 65001");
     // 指令格式：decode <输入文件路径> <输出文件路径> <解码信息输出路径> (<原文件的路径>，用于比较解码准确性)
     if (argc < 5) return false;
 

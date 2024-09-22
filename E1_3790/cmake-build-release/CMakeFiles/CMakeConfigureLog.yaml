@@ -634,3 +634,82 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/others/JetBrains/CLion 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckLibraryExists.cmake:71 (try_compile)"
+      - "D:/others/JetBrains/CLion 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindLibLZMA.cmake:97 (CHECK_LIBRARY_EXISTS)"
+      - "CMakeLists.txt:55 (find_package)"
+    checks:
+      - "Looking for lzma_auto_decoder in C:/msys64/mingw64/lib/liblzma.dll.a"
+    directories:
+      source: "E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-release/CMakeFiles/CMakeScratch/TryCompile-s97i4i"
+      binary: "E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-release/CMakeFiles/CMakeScratch/TryCompile-s97i4i"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-static-libgcc -static-libstdc++"
+    buildResult:
+      variable: "LIBLZMA_HAS_AUTO_DECODER"
+      cached: true
+      stdout: |
+        Change Dir: E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-release/CMakeFiles/CMakeScratch/TryCompile-s97i4i
+        
+        Run Build Command(s):D:/others/JetBrains/CLion 2023.2/bin/ninja/win/x64/ninja.exe -v cmTC_61bbc && [1/2] C:\\msys64\\mingw64\\bin\\cc.exe   -DCHECK_FUNCTION_EXISTS=lzma_auto_decoder -fdiagnostics-color=always -o CMakeFiles/cmTC_61bbc.dir/CheckFunctionExists.c.obj -c E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-release/CMakeFiles/CMakeScratch/TryCompile-s97i4i/CheckFunctionExists.c
+        [2/2] cmd.exe /C "cd . && C:\\msys64\\mingw64\\bin\\cc.exe -DCHECK_FUNCTION_EXISTS=lzma_auto_decoder -static-libgcc -static-libstdc++ CMakeFiles/cmTC_61bbc.dir/CheckFunctionExists.c.obj -o cmTC_61bbc.exe -Wl,--out-implib,libcmTC_61bbc.dll.a -Wl,--major-image-version,0,--minor-image-version,0  C:/msys64/mingw64/lib/liblzma.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/others/JetBrains/CLion 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckLibraryExists.cmake:71 (try_compile)"
+      - "D:/others/JetBrains/CLion 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindLibLZMA.cmake:98 (CHECK_LIBRARY_EXISTS)"
+      - "CMakeLists.txt:55 (find_package)"
+    checks:
+      - "Looking for lzma_easy_encoder in C:/msys64/mingw64/lib/liblzma.dll.a"
+    directories:
+      source: "E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-release/CMakeFiles/CMakeScratch/TryCompile-4b7qvm"
+      binary: "E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-release/CMakeFiles/CMakeScratch/TryCompile-4b7qvm"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-static-libgcc -static-libstdc++"
+    buildResult:
+      variable: "LIBLZMA_HAS_EASY_ENCODER"
+      cached: true
+      stdout: |
+        Change Dir: E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-release/CMakeFiles/CMakeScratch/TryCompile-4b7qvm
+        
+        Run Build Command(s):D:/others/JetBrains/CLion 2023.2/bin/ninja/win/x64/ninja.exe -v cmTC_2bd41 && [1/2] C:\\msys64\\mingw64\\bin\\cc.exe   -DCHECK_FUNCTION_EXISTS=lzma_easy_encoder -fdiagnostics-color=always -o CMakeFiles/cmTC_2bd41.dir/CheckFunctionExists.c.obj -c E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-release/CMakeFiles/CMakeScratch/TryCompile-4b7qvm/CheckFunctionExists.c
+        [2/2] cmd.exe /C "cd . && C:\\msys64\\mingw64\\bin\\cc.exe -DCHECK_FUNCTION_EXISTS=lzma_easy_encoder -static-libgcc -static-libstdc++ CMakeFiles/cmTC_2bd41.dir/CheckFunctionExists.c.obj -o cmTC_2bd41.exe -Wl,--out-implib,libcmTC_2bd41.dll.a -Wl,--major-image-version,0,--minor-image-version,0  C:/msys64/mingw64/lib/liblzma.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/others/JetBrains/CLion 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckLibraryExists.cmake:71 (try_compile)"
+      - "D:/others/JetBrains/CLion 2023.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindLibLZMA.cmake:99 (CHECK_LIBRARY_EXISTS)"
+      - "CMakeLists.txt:55 (find_package)"
+    checks:
+      - "Looking for lzma_lzma_preset in C:/msys64/mingw64/lib/liblzma.dll.a"
+    directories:
+      source: "E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-release/CMakeFiles/CMakeScratch/TryCompile-883tl3"
+      binary: "E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-release/CMakeFiles/CMakeScratch/TryCompile-883tl3"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-static-libgcc -static-libstdc++"
+    buildResult:
+      variable: "LIBLZMA_HAS_LZMA_PRESET"
+      cached: true
+      stdout: |
+        Change Dir: E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-release/CMakeFiles/CMakeScratch/TryCompile-883tl3
+        
+        Run Build Command(s):D:/others/JetBrains/CLion 2023.2/bin/ninja/win/x64/ninja.exe -v cmTC_ddff9 && [1/2] C:\\msys64\\mingw64\\bin\\cc.exe   -DCHECK_FUNCTION_EXISTS=lzma_lzma_preset -fdiagnostics-color=always -o CMakeFiles/cmTC_ddff9.dir/CheckFunctionExists.c.obj -c E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-release/CMakeFiles/CMakeScratch/TryCompile-883tl3/CheckFunctionExists.c
+        [2/2] cmd.exe /C "cd . && C:\\msys64\\mingw64\\bin\\cc.exe -DCHECK_FUNCTION_EXISTS=lzma_lzma_preset -static-libgcc -static-libstdc++ CMakeFiles/cmTC_ddff9.dir/CheckFunctionExists.c.obj -o cmTC_ddff9.exe -Wl,--out-implib,libcmTC_ddff9.dll.a -Wl,--major-image-version,0,--minor-image-version,0  C:/msys64/mingw64/lib/liblzma.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+...

@@ -41,7 +41,7 @@ namespace base64
         /// 将输入的string转为base64格式
         /// \param input 输入
         /// \return 输出
-        vector<uchar> base64_decode(const vector<uchar>& input)
+        vector<uchar> base64_decode(const string& input)
         {
             vector<uchar> output;
 
@@ -74,16 +74,6 @@ namespace base64
             }
 
             return output;
-        }
-
-        /// base64 数据转为 Mat（本来以为传的文件是图片，原来是二进制文件）
-        /// \param encoded
-        /// \return
-        cv::Mat base64_to_mat(vector<uchar>& encoded)
-        {
-            std::vector<uchar> data = base64_decode(encoded);
-            cv::Mat img = cv::imdecode(data, cv::IMREAD_COLOR);
-            return img;
         }
     };
 }

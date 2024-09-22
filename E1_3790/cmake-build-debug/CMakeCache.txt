@@ -296,6 +296,15 @@ E1_3790_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 E1_3790_SOURCE_DIR:STATIC=E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790
 
+//Path to a file.
+LIBLZMA_INCLUDE_DIR:PATH=C:/msys64/mingw64/include
+
+//Path to a library.
+LIBLZMA_LIBRARY_DEBUG:FILEPATH=LIBLZMA_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+LIBLZMA_LIBRARY_RELEASE:FILEPATH=C:/msys64/mingw64/lib/liblzma.dll.a
+
 //The directory containing a CMake configuration file for OpenCV.
 OpenCV_DIR:PATH=C:/msys64/mingw64/lib/cmake/opencv4
 
@@ -353,6 +362,21 @@ Vulkan_LIBRARY:FILEPATH=E:/others/Vulkan SDK/Lib/vulkan-1.lib
 
 //Path to a program.
 WINDEPLOYQT_EXECUTABLE:FILEPATH=C:/msys64/mingw64/bin/windeployqt-qt6.exe
+
+//The directory containing a CMake configuration file for ZBAR.
+ZBAR_DIR:PATH=ZBAR_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for ZBar.
+ZBar_DIR:PATH=ZBar_DIR-NOTFOUND
+
+//Path to a file.
+ZLIB_INCLUDE_DIR:PATH=C:/msys64/mingw64/include
+
+//Path to a library.
+ZLIB_LIBRARY_DEBUG:FILEPATH=ZLIB_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+ZLIB_LIBRARY_RELEASE:FILEPATH=C:/msys64/mingw64/lib/libz.dll.a
 
 
 ########################
@@ -545,6 +569,8 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 CMAKE_STRIP-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding LibLZMA
+FIND_PACKAGE_MESSAGE_DETAILS_LibLZMA:INTERNAL=[C:/msys64/mingw64/lib/liblzma.dll.a][C:/msys64/mingw64/include][1][1][1][v5.6.2()]
 //Details about finding OpenCV
 FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[C:/msys64/mingw64][v4.10.0()]
 //Details about finding Threads
@@ -553,8 +579,22 @@ FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 FIND_PACKAGE_MESSAGE_DETAILS_WrapAtomic:INTERNAL=[1][v()]
 //Details about finding WrapVulkanHeaders
 FIND_PACKAGE_MESSAGE_DETAILS_WrapVulkanHeaders:INTERNAL=[E:/others/Vulkan SDK/Include][v()]
+//Details about finding ZLIB
+FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[C:/msys64/mingw64/lib/libz.dll.a][C:/msys64/mingw64/include][c ][v1.3.1()]
 //Test HAVE_STDATOMIC
 HAVE_STDATOMIC:INTERNAL=1
+//Have library C:/msys64/mingw64/lib/liblzma.dll.a
+LIBLZMA_HAS_AUTO_DECODER:INTERNAL=1
+//Have library C:/msys64/mingw64/lib/liblzma.dll.a
+LIBLZMA_HAS_EASY_ENCODER:INTERNAL=1
+//Have library C:/msys64/mingw64/lib/liblzma.dll.a
+LIBLZMA_HAS_LZMA_PRESET:INTERNAL=1
+//ADVANCED property for variable: LIBLZMA_INCLUDE_DIR
+LIBLZMA_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: LIBLZMA_LIBRARY_DEBUG
+LIBLZMA_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: LIBLZMA_LIBRARY_RELEASE
+LIBLZMA_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //Qt feature: abstractbutton (from target Qt6::Widgets)
 QT_FEATURE_abstractbutton:INTERNAL=ON
 //Qt feature: abstractslider (from target Qt6::Widgets)
@@ -1287,6 +1327,12 @@ Vulkan_GLSLC_EXECUTABLE-ADVANCED:INTERNAL=1
 Vulkan_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Vulkan_LIBRARY
 Vulkan_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_INCLUDE_DIR
+ZLIB_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_DEBUG
+ZLIB_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_RELEASE
+ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 //CMAKE_INSTALL_PREFIX during last run

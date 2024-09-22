@@ -13,23 +13,29 @@
 
 #include "qrcodegen.hpp"
 #include "qrencode.h"
+#include "zbar.h"
 
 #include "ffmpeg_cmd.hpp"
 #include "base64_encode.hpp"
 #include "base64_decode.hpp"
 #include "qrcode_convert.hpp"
+#include "zlib_compress.hpp"
+#include "utility.hpp"
 
 #define forup(i, l, r) for (int i = l; i <= r; i++)
 #define fdown(i, l, r) for (int i = r; i >= l; i--)
 
 // define后采用b64编码
-#define B64_CODE
+//#define B64_CODE
+
+// define后采用zlib压缩
+//#define ZLIB
 
 // define后对编码成的二维码重新解码查看是否一致
 #define QRCODE_CHECK
 
 // define后控制台会显示一些数据的结果
-#define DEBUG
+//#define DEBUG
 
 // #defeine后使用qrcodegen库
 //#define QRCODEGEN
@@ -41,395 +47,90 @@
 using namespace cv;
 using namespace std;
 using namespace qrcodegen;
+using namespace zbar;
 
 class QrEncoder
 {
 private:
-
-    void print_progress_bar(int progress, int total, const string& info = string(""), int length = 50)
+    // 二维码储存的数据
+    struct QrData
     {
-        float percentage = (float) progress / total;
-        int filled_length = percentage * length;
+        int index;
+        int len; // 含有的数据长度，或者说应该有的长度
+        vector<uchar> data;
 
-        string bar(filled_length, '#');
-        bar.append(length - filled_length, '-');
-        cout << "\r[" << bar << "] " << int(percentage * 100.0) << "% " << info;
-        cout.flush();
-    }
+        bool start;
+        bool end;
 
-    /// 比较两图片是否一致
-    /// \param img1
-    /// \param img2
-    /// \return
-    bool are_images_identical(const Mat& img1, const Mat& img2)
-    {
-        if (img1.size() != img2.size() || img1.type() != img2.type())
+        QrData()
         {
-            return false;
+            index = 0;
+            len = 0;
+            start = false;
+            end = false;
         }
+    };
 
-        return norm(img1, img2) != 0;
-    }
-
-    /// 逐字节比较函数
-    /// \param filename
-    /// \param data_vector
-    /// \return 1表示一致，-1表示长度不同，-2表示长度一致但数据不同 -3表示至少一个data为空
-    int compare_vector_with_vector(const vector<uchar>& data1, const vector<uchar>& data2)
+    void debug_print_qrData(const QrData& qr_data)
     {
 #ifdef DEBUG
-        cout << "data1: "; for (uchar ch : data1) cout << ch; cout << endl;
-        cout << "data2: "; for (uchar ch : data2) cout << ch; cout << endl;
+        cout << "index: " << qr_data.index << '\n'
+             << "len: " << qr_data.len << '\n'
+             << "start: " << (int)qr_data.start << '\n'
+             << "end: " << (int)qr_data.end << '\n';
+        for (uchar ch : qr_data.data) cout << (int)ch << ' '; cout << endl;
 #endif
-
-        if (data1.empty() || data2.empty()) return -3;
-
-        if (data1.size() != data2.size())
-        {
-#ifdef DEBUG
-            cerr << "compare_vector_with_vector：两数据的长度不同" << endl;
-#endif
-            return -1;
-        }
-
-        forup (i, 0, data1.size() - 1)
-        {
-            if (data1[i] != data2[i])
-            {
-#ifdef DEBUG
-                cerr << "compare_vector_with_vector：两数据下标为" << i << "的数据不同" << endl;
-#endif
-                return -2;
-            }
-        }
-
-        return 1;
     }
 
-    /// 逐字节比较函数
-    /// \param filename
-    /// \param data_vector
-    /// \return
-    bool compare_file_with_vector(const string& filename, const vector<uint8_t>& data_vector)
+    vector<uchar> serialize(const QrData& qrData)
     {
-        ifstream file(filename, ios::binary);
-        if (!file)
+        vector<uchar> serializedData;
+
+        for (int i = 3; i >= 0; --i)
         {
-#ifdef DEBUG
-            cerr << "compare_file_with_vector：没这个文件" << filename << endl;
-#endif
-            return false;
+            serializedData.push_back((qrData.index >> (i * 8)) & 0xFF); // 从高位字节到低位
         }
 
-        // 逐字节比较
-        for (size_t i = 0; i < data_vector.size(); ++i)
+        for (int i = 3; i >= 0; --i)
         {
-            char file_byte;
-            if (!file.get(file_byte))
-            {
-#ifdef DEBUG
-                cerr << "compare_file_with_vector：文件长度与vector长度不一致" << endl;
-#endif
-                return false; // 文件长度与 vector 长度不一致
-            }
-
-            if (static_cast<uint8_t>(file_byte) != data_vector[i])
-            {
-#ifdef DEBUG
-                cerr << "compare_file_with_vector：数据不一致，位置: " << i << " 文件字节: "
-                          << static_cast<int>(file_byte)
-                          << " vector字节: " << static_cast<int>(data_vector[i]) << endl;
-#endif
-                return false; // 数据不一致
-            }
+            serializedData.push_back((qrData.len >> (i * 8)) & 0xFF); // 从高位字节到低位
         }
 
-        // 检查文件是否有多余字节
-        if (file.get() != ifstream::traits_type::eof())
-        {
-#ifdef DEBUG
-            cerr << "文件长度比vector长度长" << endl;
-#endif
-            return false;
-        }
+        serializedData.push_back(qrData.start ? '1' : '0');
 
-        return true;
+        serializedData.push_back(qrData.end ? '1' : '0');
+
+        serializedData.insert(serializedData.end(), qrData.data.begin(), qrData.data.end());
+
+        return serializedData;
     }
 
-    /// 指定路径的文件转换为 vector<uint8_t>（用于生成二维码）
-    /// \param file_name
-    /// \return
-    vector<uint8_t> file_to_vector(const string& file_name)
+    QrData deserialize(const vector<uchar>& serializedData)
     {
-        ifstream file(file_name, ios::binary);
-        if (!file.is_open())
+        QrData qrData;
+        size_t offset = 0;
+
+        for (int i = 0; i < 4; ++i)
         {
-#ifdef DEBUG
-            cerr << "file_to_vector：没这个文件" <<endl;
-#endif
+            qrData.index = (qrData.index << 8) | serializedData[offset++];
         }
 
-        vector<uchar> res =  vector<uchar>(istreambuf_iterator<char>(file), istreambuf_iterator<char>());
+        for (int i = 0; i < 4; ++i)
+        {
+            qrData.len = (qrData.len << 8) | serializedData[offset++];
+        }
 
-#ifdef DEBUG
-        cout << "文件转换到vector数据是否一致：" << compare_file_with_vector(file_name, res) << endl;
-#endif
-        file.close();
-        return res;
+        qrData.start = serializedData[offset] == '1';
+        offset++;
+
+        qrData.end = serializedData[offset] == '1';
+        offset++;
+
+        qrData.data = vector<uchar>(serializedData.begin() + offset, serializedData.end());
+
+        return qrData;
     }
 
-#ifdef QRCODEGEN
-    /// 将 QrCode 数据转换为 Mat 数据
-    /// \param qr
-    /// \param scale
-    /// \param offset
-    /// \return
-    cv::Mat qrCode_to_mat(const qrcodegen::QrCode& qr, int scale = 1, int offset = 5)
-    {
-        offset *= scale;
-        int size = qr.getSize();
-        int target_size = size * scale;
-
-        // 为了和ffmpeg适配，size为2的倍数
-        int real_size;
-        if (target_size % 2)
-        {
-            real_size = target_size + offset * 2 + 1;
-        }
-        else
-        {
-            real_size = target_size + offset * 2;
-        }
-
-        cv::Mat mat(real_size, real_size, CV_8UC1, Scalar(255));
-        mat.setTo(cv::Scalar(255));
-
-        int block_size = scale;
-
-        forup (y, 0, size - 1)
-        {
-            forup (x, 0, size - 1)
-            {
-                if (!qr.getModule(x, y)) continue;
-
-                cv::Rect rect(
-                        offset + x * block_size,
-                        offset + y * block_size,
-                        block_size,
-                        block_size
-                );
-
-                rectangle(mat, rect, Scalar(0), cv::FILLED);
-            }
-        }
-        return mat;
-    }
-#else
-    #ifdef QRENCODE
-    /// 将 QrCode 数据转换为 Mat 数据
-    /// \param qr
-    /// \param scale
-    /// \param offset
-    /// \return
-    cv::Mat qrCode_to_mat(const QRcode& qr, int scale = 1, int offset = 5)
-    {
-        offset *= scale;
-        int size = qr.width;
-        int target_size = size * scale;
-
-        // 为了和ffmpeg适配，size为2的倍数
-        int real_size;
-        if (target_size % 2)
-        {
-            real_size = target_size + offset * 2 + 1;
-        }
-        else
-        {
-            real_size = target_size + offset * 2;
-        }
-
-        cv::Mat mat(real_size, real_size, CV_8UC1, Scalar(255));
-        mat.setTo(cv::Scalar(255));
-
-        int block_size = scale;
-
-        forup (y, 0, size - 1)
-        {
-            forup (x, 0, size - 1)
-            {
-                // 是黑色
-                if (qr.data[y * size + x] & 1)
-                {
-                    cv::Rect rect(
-                            offset + x * block_size,
-                            offset + y * block_size,
-                            block_size,
-                            block_size
-                    );
-
-                    rectangle(mat, rect, Scalar(0), cv::FILLED);
-                }
-            }
-        }
-        return mat;
-    }
-    #endif
-#endif
-
-    /// 转换为灰度图
-    /// \param input
-    /// \return
-    Mat convert_to_gray(Mat& input)
-    {
-        cv::Mat gray;
-
-        if (input.empty())
-        {
-#ifdef DEBUG
-            cerr << "convert_to_gray : 输入为空" <<endl;
-#endif
-            return gray;
-        }
-
-        switch (input.channels())
-        {
-            case 1:
-                // 已经是灰度图像
-                return input;
-            case 3:
-                cvtColor(input, gray, cv::COLOR_BGR2GRAY);
-                break;
-            case 4:
-                cvtColor(input, gray, cv::COLOR_BGRA2GRAY);
-                break;
-            default:
-#ifdef DEBUG
-                cerr << "convert_to_gray : 不支持的通道数 " << input.channels() << endl;
-#endif
-                break;
-        }
-
-        return gray;
-    }
-
-    /// 画出检测到的二维码范围（测试用）
-    /// \param src
-    /// \param box
-    void draw_detect_line(Mat& src, const Mat& box)
-    {
-        if (box.total() == 4)
-        {
-            Point2f corners[4];
-            for (int i = 0; i < 4; i++)
-            {
-                corners[i] = box.at<Point2f>(i);
-            }
-
-            // 绘制边界框
-            line(src, corners[0], corners[1], Scalar(0, 255, 0), 2);
-            line(src, corners[1], corners[2], Scalar(0, 255, 0), 2);
-            line(src, corners[2], corners[3], Scalar(0, 255, 0), 2);
-            line(src, corners[3], corners[0], Scalar(0, 255, 0), 2);
-        }
-    }
-
-    /// 输出文件内容的十六进制
-    /// \param filename
-    /// \return
-    void print_file_hex(const string& filename)
-    {
-        ifstream file(filename, ios::binary | ios::ate);
-        if (!file)
-        {
-            throw runtime_error("read_file：没有文件");
-        }
-
-        streamsize size = file.tellg();
-        file.seekg(0, ios::beg);
-
-        vector<unsigned char> buffer(size);
-        if (!file.read(reinterpret_cast<char*>(buffer.data()), size))
-        {
-            throw runtime_error("read_file：读入文件失败");
-        }
-
-        for (size_t i = 0; i < buffer.size(); ++i) {
-            // 每16字节换行
-            if (i > 0 && i % 16 == 0) {
-                cout << '\n';
-            }
-
-            cout << hex << setw(2) << setfill('0') << static_cast<int>(buffer[i]) << ' ';
-        }
-
-        // 恢复十进制格式
-        cout << dec << '\n';
-    }
-
-    ///
-    /// \param file1
-    /// \param file2
-    /// \param outputFilePath
-    double compare_difference(const string& origin_file, const string& current_file, const string& output_path)
-    {
-
-//        auto f1 = file_to_vector(origin_file);
-//        auto f2 = file_to_vector(current_file);
-//        cout << std::format("{}和{}数据是否一致：", origin_file, current_file) << equal(f1.begin(), f1.end(), f2.begin(), f2.end());
-        ifstream f1(current_file, ios::binary);
-        ifstream f2(origin_file, ios::binary);
-        ofstream output(output_path, ios::binary);
-
-        // 检查文件是否成功打开
-        if (!f1.is_open() || !f2.is_open() || !output.is_open())
-        {
-#ifdef DEBUG
-            cerr << "compare_difference：无法打开输入文件或输出文件" << endl;
-#endif
-            return 0;
-        }
-
-        char byte1, byte2;
-        unsigned char diff = 0;
-        size_t diff_count = 0;
-
-        while (f1.get(byte1) && f2.get(byte2))
-        {
-            diff = ~(byte1 ^ byte2);
-
-            output.write(reinterpret_cast<const char*>(&diff), sizeof(diff));
-
-            diff_count += (8 - bitset<8>(diff).count());
-        }
-
-        // 文件一数据更多
-        while (f1.get(byte1))
-        {
-            diff = 0;
-
-            output.write(reinterpret_cast<const char *>(&diff), sizeof(diff));
-
-            diff_count += 8;
-        }
-
-        // 文件二数据更多
-        while (f2.get(byte2))
-        {
-            diff = 0;
-
-            output.write(reinterpret_cast<const char *>(&diff), sizeof(diff));
-
-            diff_count += 8;
-        }
-
-        // 关闭文件
-        f1.close();
-        f2.close();
-        output.close();
-
-        double file_size = (double)filesystem::file_size(origin_file);
-        return 1 - (double)diff_count / 8.0f / file_size;
-    }
 
 public:
     QrEncoder() = default;
@@ -444,20 +145,8 @@ public:
         duration /= 1000;
 
         auto origin = file_to_vector(file_name);
-#ifdef B64_CODE
-        // b64编码
-        base64::Encoder b64_encoder = base64::Encoder();
-        vector<uchar> input_file = b64_encoder.base64_encode(origin);
 
-    #ifdef DEBUG
-        base64::Decoder b64_decoder = base64::Decoder();
-        vector<uchar> before_encode_data = b64_decoder.base64_decode(input_file);
-        cout << "编码前的数据：";
-        for (uchar ch: before_encode_data) cout << ch; cout <<endl;
-    #endif
-#else
         vector<uchar>& input_file = origin;
-#endif
 
         int frame_amount = duration * fps;
 
@@ -468,8 +157,8 @@ public:
         vector<QRcode> qr_arr;
     #endif
 #endif
-        // 这个库的二维码最多承受1276B，但是太大了opencv识别不出来，悲
-        int ch_per_qr = max(1, min((int)ceil(((float)input_file.size() / (float)frame_amount)), 128));
+        // 太大了opencv识别不出来，悲
+        int ch_per_qr = max(1, min((int)ceil(((float)input_file.size() / (float)frame_amount)), 512));
         cout << "每张二维码携带的数据量：" << ch_per_qr * 8 << "B" <<endl;
         // 一个char是8b，一个kb就是128个char
         // 将文件数据分割成多部分生成多个二维码
@@ -479,62 +168,42 @@ public:
             print_progress_bar((i - (ch_per_qr - 1)) / ch_per_qr, input_file.size() / ch_per_qr, "二维码编码中");
 #endif
 
-            vector<uchar> tmp;
+            QrData tmp = QrData();
+            tmp.index = (i - (ch_per_qr - 1)) / ch_per_qr + 1;
             if (i + ch_per_qr >= input_file.size())
             {
-                tmp = vector<uchar>(input_file.begin() + (i - ch_per_qr), input_file.end());
+                tmp.data = vector<uchar>(input_file.begin() + (i - ch_per_qr), input_file.end());
+                tmp.end = 1;
             }
             else
             {
-                if (i > ch_per_qr - 1)
-                {
-                    tmp = vector<uchar>(input_file.begin() + (i - ch_per_qr), input_file.begin() + i);
-                }
-                else
-                {
-                    tmp = vector<uchar>(input_file.begin(), input_file.begin() + i);
-                }
+                tmp.data = vector<uchar>(input_file.begin() + (i - ch_per_qr + 1), input_file.begin() + i + 1);
+                if (i == ch_per_qr - 1) tmp.start = 1;
             }
 
+            tmp.len = tmp.data.size();
+
+            vector<uchar> tmp_string = serialize(tmp);
+
+            QrData deserialized_qr = deserialize(tmp_string);
+            debug_print_qrData(deserialized_qr);
+
 #ifdef QRCODEGEN
-            QrCode qrCode = QrCode::encodeBinary(tmp, QrCode::Ecc::HIGH);
+            vector<uchar> string_to_vector = vector<uchar>(tmp_string.begin(), tmp_string.end());
+            QrCode qrCode = QrCode::encodeBinary(string_to_vector, QrCode::Ecc::HIGH);
 #else
     #ifdef QRENCODE
-            QRcode qrCode = *QRcode_encodeData(tmp.size(), tmp.data(), 0, QR_ECLEVEL_H);
+            QRcode qrCode = *QRcode_encodeData(tmp_string.size(),
+                                               reinterpret_cast<const unsigned char *>(tmp_string.data()), 0, QR_ECLEVEL_H);
     #endif
 #endif
 
-#ifdef QRCODE_CHECK
-            // 对每个单张二维码进行数据比对
             Mat input_image = qrCode_to_mat(qrCode, 10);
+            vector<uchar> data;
+            decode(input_image, data);
 
-            const vector<uchar>& origin_data = tmp;
-            vector<uchar> encoded_data;
-            decode(input_image, encoded_data);
-
-#ifdef DEBUG
-            cout << std::format("qrCode_{}.{}和原数据是否一致: \n", (i - (ch_per_qr - 1)) / ch_per_qr, image_extension);
-#endif
-            int compare_res = compare_vector_with_vector(origin_data, encoded_data);
-#ifdef DEBUG
-            cout << compare_res << endl;
-#endif
-
-            if (compare_res == -1 || compare_res == -3)
-            {
-
-#ifdef QRCODEGEN
-                fill(tmp.begin(), tmp.end(), 0xff);
-                qrCode = QrCode::encodeBinary(tmp, QrCode::Ecc::HIGH);
-#else
-    #ifdef QRENCODE
-                // 用另一个二维码库编码
-                QrCode another_code = QrCode::encodeBinary(tmp, QrCode::Ecc::HIGH);
-                qrCode = QrCode_to_QRcode(another_code);
-    #endif
-#endif
-            }
-#endif
+            QrData qr_data = deserialize(data);
+            debug_print_qrData(qr_data);
 
             qr_arr.push_back(qrCode);
         }
@@ -566,40 +235,13 @@ public:
 //            Mat input_image = qrCode_to_mat(qrCode);
             Mat input_image = qrCode_to_mat(qrCode, 10);
 
-            QRCodeDetector detector = QRCodeDetector();
-            while (detector.detectAndDecode(input_image).empty())
-            {
-                static const string base64_chars =
-                        "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                        "abcdefghijklmnopqrstuvwxyz"
-                        "0123456789+/";
+            vector<uchar> data;
+            decode(input_image, data);
 
-                random_device rd;
-                mt19937 gen(rd()); // 使用 Mersenne Twister 生成器
-                uniform_int_distribution<char> dist(1, 63);
-#ifdef B64_CODE
-                char random_ch = base64_chars[dist(gen)];
-#else
-                char random_ch = dist(gen);
-#endif
+            QrData qr_data = deserialize(data);
+            debug_print_qrData(qr_data);
 
-                vector<uchar> reconstruct_qrcode = vector<uchar>(ch_per_qr, random_ch);
-//                cerr << random_ch <<endl;
-#ifdef QRCODEGEN
-                qrCode = QrCode::encodeBinary(reconstruct_qrcode, QrCode::Ecc::HIGH);
-#else
-    #ifdef QRENCODE
-                qrCode = *QRcode_encodeData(ch_per_qr, reconstruct_qrcode.data(), 0, QR_ECLEVEL_H);
-    #endif
-#endif
-                input_image = qrCode_to_mat(qrCode, 10);
-            }
-
-//            cout << detector.detectAndDecode(input_image) << endl;
-//            int size = qrCode.getSize();
-//            cv::resize(input_image, input_image, cv::Size(size * 2, size * 2), 0, 0, cv::INTER_CUBIC);
-
-            string img_path = qr_path + std::format("\\qrCode_{}.{}", i, image_extension);
+            string img_path = qr_path + std::format("\\qrCode_{}.{}", i + 1, image_extension);
 
             if (!imwrite(img_path, input_image)) return false;
         }
@@ -607,32 +249,12 @@ public:
         print_progress_bar(1, 1, "二维码绘制完成\n");
 #endif
 
-#ifdef QRCODE_CHECK
-//        vector<uchar> encoded_data;
-//        for (int i = 0; ; i++)
-//        {
-//            string img = std::format("\\qrCode_{}.{}", i, image_extension);
-//            string img_path = qr_path + img;
-//
-//            if (!filesystem::exists(img_path)) break;
-//
-//            cout << "对生成二维码检查：" << img << endl;
-//
-//            Mat mat = imread(img_path);
-//            decode(mat, encoded_data);
-//        }
-//
-//        cout << "编码为二维码前后数据是否一致：" << compare_vector_with_vector(input_file, encoded_data) << endl;
-#endif
-
         ffmpeg::images_to_video(qr_path, output_path, duration);
 
         // 如果需要检查，要保留文件夹
 #ifndef DEBUG
-    #ifndef QQRCODE_CHECK
         // 合成视频后，二维码已经没用了
         filesystem::remove_all(qr_path);
-    #endif
 #endif
 
         return true;
@@ -655,24 +277,29 @@ public:
 
         ffmpeg::video_to_images(input_video_path, tmp_frame_folder_path);
 
-        int fileCount = 0;
+        int file_count = 0;
         for (const auto& entry : filesystem::directory_iterator(work_path + tmp_frame_folder_path))
         {
             if (filesystem::is_regular_file(entry.status()))
             {
-                ++fileCount;
+                ++file_count;
             }
         }
 
+        // 这里把每一张二维码的结果都单独存放在vector中
         Mat* previous_img = nullptr;
-        vector<uchar> previous_data;
-        vector<uchar> encoded_data;
-        for (int i = 1; ; i++)
+        QrData previous_data;
+        vector<QrData> encoded_data;
+        bool data_start = false;
+        for (int i = 1; i <= file_count; i++)
         {
 #ifndef DEBUG
-            print_progress_bar(i, fileCount, "二维码解码中");
+            print_progress_bar(i, file_count, "二维码解码中");
 #endif
             string img = std::format("\\frame_{:05d}.{}", i, image_extension);
+#ifdef DEBUG
+            cout << img << endl;
+#endif
 
             string img_path = tmp_frame_folder_path + img;
             if (!filesystem::exists(img_path)) break;
@@ -681,15 +308,44 @@ public:
             if (previous_img && are_images_identical(*previous_img, mat)) continue;
 
             mat = convert_to_gray(mat);
-//            cv::threshold(mat, mat, 200, 255, cv::THRESH_BINARY);
-            vector<uchar> current_qr_data;
-            decode(mat, current_qr_data, previous_data.size());
+
+            vector<uchar> current_qr_data_string;
+            decode(mat, current_qr_data_string, previous_data.data.size());
+
+            if (current_qr_data_string.empty()) continue;
+            QrData current_qr_data = deserialize(current_qr_data_string);
 //            decode(mat, encoded_data, previous_data.size());
 
-            // 数据一致，这里默认是相同的
-            if (!previous_data.empty() && compare_vector_with_vector(previous_data, current_qr_data) != 1) continue;
+            debug_print_qrData(current_qr_data);
 
-            encoded_data.insert(encoded_data.end(), current_qr_data.begin(), current_qr_data.end());
+            // 数据接收开始
+            if (!data_start)
+            {
+                if (current_qr_data.start)
+                {
+                    data_start = true;
+                } else
+                {
+                    continue;
+                }
+            }
+
+            // 二维码数据序号一样，重复
+            if (!previous_data.data.empty() && previous_data.index == current_qr_data.index) continue;
+
+            // 有中间二维码没识别出来
+            if (!previous_data.data.empty() && previous_data.index + 1 < current_qr_data.index)
+            {
+                forup (k, 1, current_qr_data.index - previous_data.index - 1)
+                {
+                    QrData recovery_qrcode = QrData();
+                    recovery_qrcode.index = previous_data.index + k;
+                    recovery_qrcode.data = vector<uchar>(previous_data.len, 'a');
+                    encoded_data.push_back(recovery_qrcode);
+                }
+            }
+
+            encoded_data.push_back(current_qr_data);
 #ifdef DEBUG
     #ifdef QRCODE_CHECK
 //            Mat tmp = imread(std::format("qrCodes\\qrCode_{}.{}", i - 1, image_extension));
@@ -706,21 +362,27 @@ public:
 #endif
             previous_img = &mat;
             previous_data = current_qr_data;
+
+            // 数据接收结束
+            if (current_qr_data.end) break;
         }
+
+
 #ifndef DEBUG
         print_progress_bar(1, 1, "二维码解码完成\n");
 #endif
 
-#ifdef B64_CODE
-        // b64解码
-        base64::Decoder b64_decoder = base64::Decoder();
-        vector<uchar> output_file_data = b64_decoder.base64_decode(encoded_data);
-    #ifdef DEBUG
-        for (uchar ch: output_file_data) cout << ch; cout <<endl;
-    #endif
-#else
-        vector<uchar>& output_file_data = encoded_data;
-#endif
+
+
+//        vector<uchar> compressed_data;
+        string complete_data;
+        for (auto data_block : encoded_data)
+        {
+            complete_data.insert(complete_data.end(), data_block.data.begin(), data_block.data.end());
+        }
+
+
+
 //        auto output_file_data = b64_decoder.base64_decode(encoded_data);
 
         // 本来想做把文件还原回去的，但是要对传输的数据再包装一层才行，这么一想，为啥不搞zip压缩呢
@@ -744,7 +406,7 @@ public:
 //        else
 //        {
             ofstream file = ofstream(output_file_path, ios::binary);
-            file.write(reinterpret_cast<const char *>(output_file_data.data()), output_file_data.size());
+            file.write(reinterpret_cast<const char *>(complete_data.data()), complete_data.size());
 
             file.close();
 //        }
@@ -760,14 +422,7 @@ public:
         }
 
 #ifndef DEBUG
-//        filesystem::remove_all(work_path + tmp_frame_folder_path);
-#else
-//    #ifdef QRCODE_CHECK
-//        filesystem::remove_all(work_path + "qrCodes");
-//        filesystem::remove_all(work_path + tmp_frame_folder_path);
-//    #else
-//        filesystem::remove_all(work_path + tmp_frame_folder_path);
-//    #endif
+        filesystem::remove_all(work_path + tmp_frame_folder_path);
 #endif
 
         return true;
@@ -778,36 +433,37 @@ public:
     /// \param output_data 输出数据
     /// \param length 如果没能识别出来的话，补上的数据长度，一般传入前一个二维码的有效长度
     /// \return
-    bool decode(Mat& input_image, vector<uchar>& output_data, int length = 0)
+    bool decode(Mat input_image, vector<uchar>& output_data, int length = 0)
     {
-        QRCodeDetector qrDecoder = QRCodeDetector();
-        Mat bbox, rectified_image;
+//        QRCodeDetector qrDecoder = QRCodeDetector();
+//        Mat bbox, rectified_image;
+//
+//        input_image = convert_to_gray(input_image);
+//
+//        if (!qrDecoder.detect(input_image, bbox)) return false;
+//
+//        string data = qrDecoder.decode(input_image, bbox, rectified_image);
 
-        input_image = convert_to_gray(input_image);
+        ImageScanner scanner;
+        scanner.set_config(ZBAR_QRCODE, ZBAR_CFG_ENABLE, 1);
+        Image zbar_image(input_image.cols, input_image.rows, "Y800", input_image.data, input_image.cols * input_image.rows);
+        int res = scanner.scan(zbar_image);
+        if (res == 0) return false;
 
-        if (!qrDecoder.detect(input_image, bbox)) return false;
+        string data;
 
-        string data = qrDecoder.decode(input_image, bbox, rectified_image);
-
-#ifdef DEBUG
-        cout << "识别得到的二维码数据：" << data <<endl;
-#endif
-
-        if (data.empty())
+        for (Image::SymbolIterator symbol = zbar_image.symbol_begin();
+             symbol != zbar_image.symbol_end();
+             ++symbol)
         {
-
-            vector<uchar> ch = vector<uchar>(length, 'A');
-
-            output_data.insert(output_data.end(), ch.begin(), ch.end());
-
-            return false;
+            data += symbol->get_data();
         }
 
-//        for (char ch : data)
-//        {
-//            output_data.push_back(ch);
-//        }
+#ifdef DEBUG
+        cout << "decode: 识别得到的二维码数据：" << data <<endl;
+#endif
 
+//        output_data += data;
         output_data.insert(output_data.end(), data.begin(), data.end());
 
         return true;

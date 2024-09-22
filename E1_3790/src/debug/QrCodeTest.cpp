@@ -114,45 +114,138 @@ void draw_detect_line(Mat& src, const Mat& box)
     }
 }
 
+Mat get_rectified_qrcode(Mat& input_image, Mat& bbox)
+{
+    if (bbox.total() == 4)
+    {
+        Point2f corners[4];
+        for (int i = 0; i < 4; i++)
+        {
+            corners[i] = bbox.at<Point2f>(i);
+        }
+
+        int size = 200;
+        Point2f targetCorners[4] =
+        {
+                Point2f(0, 0),
+                Point2f(size, 0),
+                Point2f(size, size),
+                Point2f(0, size)
+        };
+
+        Mat perspectiveMatrix = getPerspectiveTransform(corners, targetCorners);
+
+        Mat output_image;
+        warpPerspective(input_image, output_image, perspectiveMatrix, Size(size, size));
+
+        return output_image;
+    }
+    return {};
+}
+
+double calculate_snr(const Mat& original, const Mat& noisy)
+{
+    Mat noise = noisy - original;
+
+    Scalar signal_mean = mean(original);
+    Scalar noise_stddev;
+    meanStdDev(noise, Scalar(), noise_stddev);
+
+    double snr = signal_mean[0] / noise_stddev[0];
+
+    return snr;
+}
+
+double compute_ssim(const Mat& img1, const Mat& img2) {
+    const double C1 = 6.5025, C2 = 58.5225;
+
+    // 将图像转换为浮点型
+    Mat img1f, img2f;
+    img1.convertTo(img1f, CV_32F);
+    img2.convertTo(img2f, CV_32F);
+
+    // 计算均值
+    Mat mu1, mu2;
+    GaussianBlur(img1f, mu1, Size(11, 11), 1.5);
+    GaussianBlur(img2f, mu2, Size(11, 11), 1.5);
+
+    Mat mu1_sq = mu1.mul(mu1);
+    Mat mu2_sq = mu2.mul(mu2);
+    Mat mu1_mu2 = mu1.mul(mu2);
+
+    // 计算方差和协方差
+    Mat sigma1_sq, sigma2_sq, sigma12;
+    GaussianBlur(img1f.mul(img1f), sigma1_sq, Size(11, 11), 1.5);
+    sigma1_sq -= mu1_sq;
+
+    GaussianBlur(img2f.mul(img2f), sigma2_sq, Size(11, 11), 1.5);
+    sigma2_sq -= mu2_sq;
+
+    GaussianBlur(img1f.mul(img2f), sigma12, Size(11, 11), 1.5);
+    sigma12 -= mu1_mu2;
+
+    // 计算 SSIM
+    Mat t1 = 2 * mu1_mu2 + C1;
+    Mat t2 = 2 * sigma12 + C2;
+    Mat t3 = t1.mul(t2);
+
+    t1 = mu1_sq + mu2_sq + C1;
+    t2 = sigma1_sq + sigma2_sq + C2;
+    t1 = t1.mul(t2);
+
+    Mat ssim_map;
+    divide(t3, t1, ssim_map);
+
+    Scalar mssim = mean(ssim_map); // 返回 SSIM 的平均值
+
+    return mssim[0]; // 由于是灰度图，返回第一个通道的值
+}
+
 int main(int argc, char* argv[])
 {
-    // Max capacity = 10208 bits
-//    auto input_file = file_to_vector("data.txt");
-//
-//    QrCode qrCode = QrCode::encodeBinary(input_file, QrCode::Ecc::HIGH);
-//
-//    Mat input_image = qrCode_to_mat(qrCode, 200);
-
-    Mat input_image = imread("frame_00304.jpg");
+    Mat input_image = imread("qrCode_5.jpg");
 
     QRCodeDetector qrDecoder = QRCodeDetector();
     Mat bbox, rectified_image;
 
-//    input_image = convert_to_gray(input_image);
-
-//    cv::threshold(input_image, input_image, 200, 255, cv::THRESH_BINARY);
-
     string data;
-    if (qrDecoder.detect(input_image, bbox))
-        data = qrDecoder.decode(input_image, bbox, rectified_image);
+    qrDecoder.detect(input_image, bbox);
 
-    draw_detect_line(input_image, bbox);
+    Mat m1 = get_rectified_qrcode(input_image, bbox);
+//    imshow("qrcode", m1);
 
-    imshow("image", input_image);
 
-    if(data.length() > 0)
-    {
-        cout << "Decoded Data : " << data << endl;
+    input_image = imread("frame_00034.jpg");
 
-        rectified_image.convertTo(rectified_image, CV_8UC3);
-//        imshow("Rectified QRCode", rectified_image);
+    qrDecoder = QRCodeDetector();
 
-        waitKey(0);
-    }
-    else
-        cout << "QR Code not detected" << endl;
+    qrDecoder.detect(input_image, bbox);
 
-    waitKey(0);
+    Mat m2 = get_rectified_qrcode(input_image, bbox);
+//    imshow("qrcode", m2);
+
+    resize(m1, m1, m2.size());
+    cout << calculate_snr(m1, m2) << endl;
+    cout << compute_ssim(m1, m2) << endl;
+
+    imshow("m1", m1);
+    imshow("m2", m2);
+
+    waitKey();
+
+//    if(data.length() > 0)
+//    {
+//        cout << "Decoded Data : " << data << endl;
+//
+//        rectified_image.convertTo(rectified_image, CV_8UC3);
+////        imshow("Rectified QRCode", rectified_image);
+//
+//        waitKey(0);
+//    }
+//    else
+//        cout << "QR Code not detected" << endl;
+//
+//    waitKey(0);
 
     return 0;
 }
