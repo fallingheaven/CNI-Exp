@@ -1,0 +1,18 @@
+# ninja log v5
+1	1254	7491082792042599	build.ninja	1535d3c9cc00747a
+2873	3388	7482669915963778	E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/bin/Check_Img_Identical.exe	ba18d3ec095b05f6
+20	3901	7485251585151497	CMakeFiles/qrcodegen.dir/src/lib/QR-Code-generator/cpp/qrcodegen.cpp.obj	dd042a28e91bdeff
+3903	4234	7485251588528923	libqrcodegen.a	e0d68cabc3a66c66
+9	1649	7487047394035908	CMakeFiles/QrCodeTest.dir/src/debug/QrCodeTest.cpp.obj	7a90e9e724c5c556
+10	5278	7487119794561746	CMakeFiles/decode.dir/src/main.cpp.obj	c186bb6684aad4e
+11	5056	7487119878631503	CMakeFiles/encode.dir/src/main.cpp.obj	73ed42c0225661fe
+5057	5777	7487119885758116	E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/bin/encode.exe	e2130392420e2094
+5279	6061	7487119802308708	E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/bin/decode.exe	57be0fbf028346ef
+8	2873	7482669910900858	CMakeFiles/Check_Img_Identical.dir/src/debug/check_img_identical.cpp.obj	1d1248f3c8dd1789
+1650	2255	7487047399989923	E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/bin/QrCodeTest.exe	638a285c1836680f
+10	231	7482897433206840	qt_progress_bar_autogen/timestamp	e471e71faf2b91e2
+10	231	7482897433206840	qt_progress_bar_autogen/mocs_compilation.cpp	e471e71faf2b91e2
+10	231	7482897433206840	E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-debug/qt_progress_bar_autogen/timestamp	e471e71faf2b91e2
+10	231	7482897433206840	E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-debug/qt_progress_bar_autogen/mocs_compilation.cpp	e471e71faf2b91e2
+7	1608	7482900484678174	CMakeFiles/progress_bar.dir/src/debug/progress_bar.cpp.obj	edb99f1b68191ec5
+1608	2139	7482900489891186	E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/bin/progress_bar.exe	22442fc385155968
