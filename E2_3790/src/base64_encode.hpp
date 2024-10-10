@@ -19,14 +19,14 @@ namespace base64
         /// 将数据编码为 Base64
         /// \param input
         /// \return
-        string base64_encode(const vector<uchar>& input)
+        vector<uchar> base64_encode(const vector<uchar>& input)
         {
             static const string base64_chars =
                     "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                     "abcdefghijklmnopqrstuvwxyz"
                     "0123456789+/";
 
-            string output;
+            vector<uchar> output;
             // 记录每一组的0/1位
             int group = 0;
             // base编码逻辑
@@ -53,15 +53,15 @@ namespace base64
                     if (i % 3 == 1)
                     {
                         group <<= 4;
-                        output.push_back(base64_chars[(group >> 18) & 0x3F]);
-                        output.push_back(base64_chars[(group >> 12) & 0x3F]);
+                        output.push_back(base64_chars[(group >> 6) & 0x3F]);
+                        output.push_back(base64_chars[(group) & 0x3F]);
                     }
                     else if (i % 3 == 2)
                     {
                         group <<= 2;
-                        output.push_back(base64_chars[(group >> 18) & 0x3F]);
                         output.push_back(base64_chars[(group >> 12) & 0x3F]);
                         output.push_back(base64_chars[(group >> 6) & 0x3F]);
+                        output.push_back(base64_chars[(group) & 0x3F]);
                     }
 
                     // 没数据的部分用‘=’填充

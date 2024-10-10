@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.26)
-project(E1_3790)
+project(E2_3790)
 
 set(CMAKE_CXX_STANDARD 20)
 
@@ -39,9 +39,9 @@ find_library(QRENCODE_LIBRARY qrencode REQUIRED)
 link_libraries(${QRENCODE_LIBRARY})
 
 
-find_package(ZLIB REQUIRED)
-include_directories(${ZLIB_INCLUDE_DIRS})
-link_libraries(${ZLIB_LIBRARIES})
+#find_package(ZLIB REQUIRED)
+#include_directories(${ZLIB_INCLUDE_DIRS})
+#link_libraries(${ZLIB_LIBRARIES})
 
 include_directories(C:/msys64/mingw64/include/zbar)
 link_libraries(C:/msys64/mingw64/lib/libzbar.dll.a)

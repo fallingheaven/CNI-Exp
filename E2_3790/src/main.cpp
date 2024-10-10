@@ -36,15 +36,17 @@ int main(int argc, char** argv)
 bool encode_input(int argc, char** argv)
 {
     system("chcp 65001");
-    // 指令格式：encode ./ <输入文件路径> <输出文件路径> <生成视频时长>
-    if (argc < 3) return false;
+    // 指令格式：encode ./ <最大传输单元> <输出文件路径> <生成视频时长>
+    // 其中./是当前工作目录
+    if (argc < 5) return false;
 
     string input_file_path = argv[2];
+    int max_transmission_unit = stoi(argv[3]);
     string output_file_path = argv[4];
     int video_length = stoi(argv[5]);
 
     QrEncoder encoder = QrEncoder();
-    if (!encoder.encode(input_file_path, output_file_path, video_length)) return false;
+    if (!encoder.encode(input_file_path, output_file_path, video_length, max_transmission_unit)) return false;
 
     return true;
 }
@@ -52,24 +54,22 @@ bool encode_input(int argc, char** argv)
 bool decode_input(int argc, char** argv)
 {
     system("chcp 65001");
-    // 指令格式：decode <输入文件路径> <输出文件路径> <解码信息输出路径> (<原文件的路径>，用于比较解码准确性)
-    if (argc < 5) return false;
+    // 指令格式：decode <输入文件路径> <输出目录> (<原文件目录>，用于比较解码准确性，如果为空默认为输出目录)
+    if (argc < 4) return false;
 
     string input_file_path = argv[2];
-    string output_file_path = argv[3];
-    string output_info_path = argv[4];
-
-    string origin_file_path = argv[5];
-
+    string output_info_directory = argv[3];
+    string origin_file_path;
+    if (argc < 5)
+    {
+        origin_file_path = "";
+    }
+    else
+    {
+        origin_file_path = argv[4];
+    }
     QrEncoder encoder = QrEncoder();
-    if (argc == 5)
-    {
-        if (!encoder.decode(input_file_path, output_file_path, output_file_path)) return false;
-    }
-    else if (argc == 6)
-    {
-        if (!encoder.decode(input_file_path, output_file_path, output_info_path, origin_file_path)) return false;
-    }
+    if (!encoder.decode(input_file_path, output_info_directory, origin_file_path)) return false;
 
     return true;
 }

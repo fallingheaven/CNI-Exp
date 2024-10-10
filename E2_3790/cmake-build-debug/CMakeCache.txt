@@ -157,7 +157,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=E1_3790
+CMAKE_PROJECT_NAME:STATIC=E2_3790
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=C:/msys64/mingw64/bin/ranlib.exe
@@ -247,6 +247,15 @@ E1_3790_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 E1_3790_SOURCE_DIR:STATIC=E:/code/practice/Computer_Network/Experiment/cni-exp/E2_3790
+
+//Value Computed by CMake
+E2_3790_BINARY_DIR:STATIC=E:/code/practice/Computer_Network/Experiment/cni-exp/E2_3790/cmake-build-debug
+
+//Value Computed by CMake
+E2_3790_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+E2_3790_SOURCE_DIR:STATIC=E:/code/practice/Computer_Network/Experiment/cni-exp/E2_3790
 
 //The directory containing a CMake configuration file for OpenCV.
 OpenCV_DIR:PATH=C:/msys64/mingw64/lib/cmake/opencv4

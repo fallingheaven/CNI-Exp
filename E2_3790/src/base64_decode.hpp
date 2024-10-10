@@ -41,7 +41,7 @@ namespace base64
         /// 将输入的string转为base64格式
         /// \param input 输入
         /// \return 输出
-        vector<uchar> base64_decode(const string& input)
+        vector<uchar> base64_decode(const vector<uchar>& input)
         {
             vector<uchar> output;
 
@@ -55,7 +55,11 @@ namespace base64
             // 由于我们的处理，正常来说获取到的input的大小应该是4的倍数
             forup (i, 0, input.size())
             {
-                if (input[i] == '=') continue;
+                if (input[i] == '=')
+                {
+                    group <<= 6;
+                    continue;
+                }
 
                 // 处理一组
                 if (i != 0 && i % 4 == 0)
