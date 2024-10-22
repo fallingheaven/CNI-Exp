@@ -1,0 +1,21 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "GNU",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : {},
+	"dir-cur-bld" : "E:/code/practice/Computer_Network/Experiment/cni-exp/E3_3790/cmake-build-debug",
+	"dir-cur-src" : "E:/code/practice/Computer_Network/Experiment/cni-exp/E3_3790",
+	"dir-top-bld" : "E:/code/practice/Computer_Network/Experiment/cni-exp/E3_3790/cmake-build-debug",
+	"dir-top-src" : "E:/code/practice/Computer_Network/Experiment/cni-exp/E3_3790",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : 
+	[
+		"C:\\msys64\\mingw64\\include\\pcap"
+	],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "E:/code/practice/Computer_Network/Experiment/cni-exp/E3_3790/cmake-build-debug/CMakeFiles/ip.dir"
+}

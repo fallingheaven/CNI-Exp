@@ -47,9 +47,9 @@ link_libraries(${QRENCODE_LIBRARY})
 #set(CMAKE_AUTORCC ON)
 #set(CMAKE_AUTOUIC ON)
 
-find_package(ZLIB REQUIRED)
-include_directories(${ZLIB_INCLUDE_DIRS})
-link_libraries(${ZLIB_LIBRARIES})
+#find_package(ZLIB REQUIRED)
+#include_directories(${ZLIB_INCLUDE_DIRS})
+#link_libraries(${ZLIB_LIBRARIES})
 
 include_directories(C:/msys64/mingw64/include/zbar)
 link_libraries(C:/msys64/mingw64/lib/libzbar.dll.a)

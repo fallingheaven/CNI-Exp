@@ -1,0 +1,105 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.26"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "E1_3790",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Check_Img_Identical::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Check_Img_Identical-Release-b878a995e380ad6fa279.json",
+					"name" : "Check_Img_Identical",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "QrCodeTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-QrCodeTest-Release-7be468f9608341904dfc.json",
+					"name" : "QrCodeTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "decode::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-decode-Release-1563ac13cd3982cb0de0.json",
+					"name" : "decode",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "encode::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-encode-Release-1db25baea7d704341bbe.json",
+					"name" : "encode",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "progress_bar::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-progress_bar-Release-ddb1e6474a4c27ea51ed.json",
+					"name" : "progress_bar",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "qrcodegen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-qrcodegen-Release-09eab0480d0d0b19fd61.json",
+					"name" : "qrcodegen",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790/cmake-build-release",
+		"source" : "E:/code/practice/Computer_Network/Experiment/cni-exp/E1_3790"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
