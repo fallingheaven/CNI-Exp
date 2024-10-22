@@ -887,7 +887,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "E4_3790"
+			"value" : "E3_3790"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1280,6 +1280,42 @@
 			],
 			"type" : "BOOL",
 			"value" : "FALSE"
+		},
+		{
+			"name" : "E3_3790_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "E:/code/practice/Computer_Network/Experiment/cni-exp/E3_3790/cmake-build-debug"
+		},
+		{
+			"name" : "E3_3790_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "E3_3790_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "E:/code/practice/Computer_Network/Experiment/cni-exp/E3_3790"
 		},
 		{
 			"name" : "E4_3790_BINARY_DIR",

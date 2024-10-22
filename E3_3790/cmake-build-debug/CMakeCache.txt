@@ -157,7 +157,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=E4_3790
+CMAKE_PROJECT_NAME:STATIC=E3_3790
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=C:/msys64/mingw64/bin/ranlib.exe
@@ -241,6 +241,15 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 // during the make.  This is useful for debugging only. With Visual
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
+
+//Value Computed by CMake
+E3_3790_BINARY_DIR:STATIC=E:/code/practice/Computer_Network/Experiment/cni-exp/E3_3790/cmake-build-debug
+
+//Value Computed by CMake
+E3_3790_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+E3_3790_SOURCE_DIR:STATIC=E:/code/practice/Computer_Network/Experiment/cni-exp/E3_3790
 
 //Value Computed by CMake
 E4_3790_BINARY_DIR:STATIC=E:/code/practice/Computer_Network/Experiment/cni-exp/E3_3790/cmake-build-debug
