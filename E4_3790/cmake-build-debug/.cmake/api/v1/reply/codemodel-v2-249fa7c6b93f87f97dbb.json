@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "E3_3790",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ftp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ftp-Debug-5fe5dbfea28179f4b844.json",
+					"name" : "ftp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ip::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ip-Debug-5c7c70ee293d045b4447.json",
+					"name" : "ip",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "E:/code/practice/Computer_Network/Experiment/cni-exp/E3_3790/cmake-build-debug",
+		"source" : "E:/code/practice/Computer_Network/Experiment/cni-exp/E3_3790"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

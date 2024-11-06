@@ -3,135 +3,30 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="CMakePresetLoader"><![CDATA[{
-  "useNewFormat": true
-}]]></component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
   <component name="CMakeRunConfigurationManager">
-    <generated />
+    <generated>
+      <config projectName="E3_3790" targetName="ftp" />
+      <config projectName="E3_3790" targetName="ip" />
+    </generated>
   </component>
   <component name="CMakeSettings">
-    <configurations />
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb72b569-4a74-49f3-b714-013bcd090b50" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/../E1_3790/.idea/editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/.idea/QtSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../E1_3790/.idea/QtSettings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../E1_3790/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../E1_3790/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/.cmake/api/v1/reply/cache-v2-997d7b96fba30cdc1eb4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-a19def5aa81d45ba8432.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-cafc9aa5eb4110149a9a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/.cmake/api/v1/reply/index-2024-09-20T08-32-11-0415.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/.cmake/api/v1/reply/target-Check_Img_Identical-Debug-6686293b8ab7248b036a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/.cmake/api/v1/reply/target-QrCodeTest-Debug-df7e792fb5586d01c409.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/.cmake/api/v1/reply/target-decode-Debug-72b6fcae9aa8b4909683.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/.cmake/api/v1/reply/target-encode-Debug-2e887d24cbbb41e60538.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/.cmake/api/v1/reply/target-progress_bar-Debug-952f06be3e1e54401db2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-cb2de3906311510581dd.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/.ninja_log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/Check_Img_Identical_autogen.dir/AutogenInfo.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/QrCodeTest_autogen.dir/AutogenInfo.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/d/a602bddc318547a269494af2425b1f7cd2e3917cd508510dce0c054ca86a37d6.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/decode_autogen.dir/AutogenInfo.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/encode_autogen.dir/AutogenInfo.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/qrcodegen.dir/src/lib/QR-Code-generator/cpp/qrcodegen.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/qt_progress_bar_autogen.dir/AutogenInfo.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/qt_progress_bar_autogen.dir/AutogenUsed.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/qt_progress_bar_autogen.dir/ParseCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../E1_3790/cmake-build-debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/.cmake/api/v1/reply/cache-v2-1575658b0a6de7a6ee37.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/.cmake/api/v1/reply/cmakeFiles-v1-c40aa09207ca48af3db1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/.cmake/api/v1/reply/codemodel-v2-f007c98a27219f6835a7.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/.cmake/api/v1/reply/index-2024-09-20T08-32-11-0403.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/.cmake/api/v1/reply/target-Check_Img_Identical-Release-04c5666aaf654163b3d6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/.cmake/api/v1/reply/target-QrCodeTest-Release-0b16bb56ddcd925606ec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/.cmake/api/v1/reply/target-decode-Release-d1a23e6327c11c2dec9c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/.cmake/api/v1/reply/target-encode-Release-1879844393af36ed42a3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/.cmake/api/v1/reply/target-progress_bar-Release-00d5be24ec0469126250.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/.cmake/api/v1/reply/toolchains-v1-cb2de3906311510581dd.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/.ninja_log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../E1_3790/cmake-build-release/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/CMakeFiles/3.26.4/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/CMakeFiles/3.26.4/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../E1_3790/cmake-build-release/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/CMakeFiles/Check_Img_Identical_autogen.dir/AutogenInfo.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/CMakeFiles/QrCodeTest_autogen.dir/AutogenInfo.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/CMakeFiles/clion-Release-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../E1_3790/cmake-build-release/CMakeFiles/clion-Release-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../E1_3790/cmake-build-release/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/CMakeFiles/decode_autogen.dir/AutogenInfo.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/CMakeFiles/encode_autogen.dir/AutogenInfo.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/CMakeFiles/qt_progress_bar_autogen.dir/AutogenInfo.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../E1_3790/cmake-build-release/CMakeFiles/rules.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E1_3790/cmake-build-release/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../E1_3790/cmake-build-release/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/.idea/QtSettings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../E2_3790/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/.cmake/api/v1/reply/cache-v2-1a46823cb127976b6614.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-1d0985416687bf76726e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-d332f750ca8a05c71b07.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/.cmake/api/v1/reply/index-2024-10-04T09-11-52-0653.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-cb2de3906311510581dd.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../E2_3790/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-release/.cmake/api/v1/reply/cache-v2-18fa5b82c5dcb4d8b823.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-release/.cmake/api/v1/reply/cmakeFiles-v1-25a07e60797fa89ff980.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-release/.cmake/api/v1/reply/codemodel-v2-9a403695911ca28deec0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-release/.cmake/api/v1/reply/index-2024-10-04T09-11-52-0646.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-release/.cmake/api/v1/reply/toolchains-v1-cb2de3906311510581dd.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-release/.ninja_log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-release/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../E2_3790/cmake-build-release/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-release/CMakeFiles/3.26.4/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-release/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-release/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-release/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-release/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-release/CMakeFiles/3.26.4/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-release/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-release/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-release/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../E2_3790/cmake-build-release/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-release/CMakeFiles/clion-Release-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../E2_3790/cmake-build-release/CMakeFiles/clion-Release-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-release/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../E2_3790/cmake-build-release/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-release/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../E2_3790/cmake-build-release/CMakeFiles/rules.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-release/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../E2_3790/cmake-build-release/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/cmake-build-release/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../E2_3790/cmake-build-release/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../E2_3790/doc/E02-3790-魏清晨.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../E2_3790/doc/E02-3790-魏清晨.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../E4_3790/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,32 +37,89 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ip.cpp" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2024" />
+    <option name="minorVersion" value="2.2" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2nkjvoEemzHXgQZ6DR3w3nFjxDN" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "CMake 应用程序.ftp.executor": "Run",
-    "CMake 应用程序.ip.executor": "Run",
-    "CMake 应用程序.main.executor": "Run",
-    "CMake 调试.E4_3790.executor": "Debug",
-    "RunOnceActivity.RadMigrateCodeStyle": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "E:/code/practice/Computer_Network/Experiment/cni-exp/E3_3790",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;CMake 应用程序.ftp.executor&quot;: &quot;Run&quot;,
+    &quot;CMake 应用程序.ip.executor&quot;: &quot;Run&quot;,
+    &quot;CMake 应用程序.main.executor&quot;: &quot;Run&quot;,
+    &quot;CMake 调试.E4_3790.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/code/practice/Computer_Network/Experiment/cni-exp/E3_3790&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\code\practice\Computer_Network\Experiment\cni-exp\E4_3790\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake 应用程序.ip">
+    <configuration name="E4_3790" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory" temporary="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="ftp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="true" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="E3_3790" TARGET_NAME="ftp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="E3_3790" RUN_TARGET_NAME="ftp">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ip" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="true" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="E3_3790" TARGET_NAME="ip" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="E3_3790" RUN_TARGET_NAME="ip">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake 调试.E4_3790" />
+      <item itemvalue="CMake 应用程序.ftp" />
+      <item itemvalue="CMake 应用程序.ip" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="CMake 调试.E4_3790" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
       <changelist id="eb72b569-4a74-49f3-b714-013bcd090b50" name="更改" comment="" />
@@ -181,13 +133,45 @@
       <workItem from="1729527702628" duration="3215000" />
       <workItem from="1729581652050" duration="11820000" />
       <workItem from="1729596193928" duration="1849000" />
-      <workItem from="1729598083650" duration="1159000" />
+      <workItem from="1729598083650" duration="321000" />
+      <workItem from="1729599253788" duration="142000" />
+      <workItem from="1729958307652" duration="135000" />
+      <workItem from="1729959387122" duration="3000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VCPKGProject">
     <isAutomaticCheckingOnLaunch value="false" />
     <isAutomaticFoundErrors value="true" />
     <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/ip.cpp</url>
+          <line>168</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/ip.cpp</url>
+          <line>177</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/ip.cpp</url>
+          <line>64</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/ftp.cpp</url>
+          <line>137</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
