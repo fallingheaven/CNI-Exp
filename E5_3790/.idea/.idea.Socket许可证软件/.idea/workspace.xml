@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e62ed077-e4dc-4672-b95b-293efa865b44" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/../华3_IPv6_3790/bin/7.1_IPv6地址配置实验/7.1_IPv6地址配置实验.topo" beforeDir="false" afterPath="$PROJECT_DIR$/../华3_IPv6_3790/bin/7.1_IPv6地址配置实验/7.1_IPv6地址配置实验.topo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../华3_IPv6_3790/bin/7.2_ICMPv6与NDP实验/7.2_ICMPv6与NDP实验.topo" beforeDir="false" afterPath="$PROJECT_DIR$/../华3_IPv6_3790/bin/7.2_ICMPv6与NDP实验/7.2_ICMPv6与NDP实验.topo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../华7_IPv6_3790/bin/9.1 IPv6 以太网二层交换基础实验/528E7BB4-4EB1-4e07-AB88-A36617DEDA6A/flash.efz" beforeDir="false" afterPath="$PROJECT_DIR$/../华7_IPv6_3790/bin/9.1 IPv6 以太网二层交换基础实验/528E7BB4-4EB1-4e07-AB88-A36617DEDA6A/flash.efz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../华7_IPv6_3790/bin/9.1 IPv6 以太网二层交换基础实验/9.1 IPv6 以太网二层交换基础实验.topo" beforeDir="false" afterPath="$PROJECT_DIR$/../华7_IPv6_3790/bin/9.1 IPv6 以太网二层交换基础实验/9.1 IPv6 以太网二层交换基础实验.topo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../华7_IPv6_3790/bin/9.1 IPv6 以太网二层交换基础实验/ABC0C9F0-AABB-4753-9AD4-792F3A8C0AEC/flash.efz" beforeDir="false" afterPath="$PROJECT_DIR$/../华7_IPv6_3790/bin/9.1 IPv6 以太网二层交换基础实验/ABC0C9F0-AABB-4753-9AD4-792F3A8C0AEC/flash.efz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../华7_IPv6_3790/doc/IPv6网络基础-第八九章-3790-魏清晨.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../华7_IPv6_3790/doc/~$v6网络基础-第八九章-3790-魏清晨.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../华7_IPv6_3790/doc/~WRL0005.tmp" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2oprX7vCqET4TpxkHQTgExm2OZB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Socket许可证软件" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Socket许可证软件.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="e62ed077-e4dc-4672-b95b-293efa865b44" name="更改" comment="" />
+      <created>1731577395209</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731577395209</updated>
+      <workItem from="1731577396250" duration="117000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+</project>
