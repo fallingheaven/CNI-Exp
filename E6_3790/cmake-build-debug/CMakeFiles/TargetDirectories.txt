@@ -1,0 +1,4 @@
+E:/code/practice/Computer_Network/Experiment/cni-exp/E3_3790/cmake-build-debug/CMakeFiles/ip.dir
+E:/code/practice/Computer_Network/Experiment/cni-exp/E3_3790/cmake-build-debug/CMakeFiles/ftp.dir
+E:/code/practice/Computer_Network/Experiment/cni-exp/E3_3790/cmake-build-debug/CMakeFiles/edit_cache.dir
+E:/code/practice/Computer_Network/Experiment/cni-exp/E3_3790/cmake-build-debug/CMakeFiles/rebuild_cache.dir
